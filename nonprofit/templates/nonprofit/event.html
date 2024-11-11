@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Category</th>
+            <th>Organization</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for event in event_list %}
+        <tr>
+            <td>{{ event.name }}</td>
+            <td>{{ event.description }}</td>
+            <td>{{ event.date }}</td>
+            <td>{{ event.location }}</td>
+            <td>
+                {% for skill in volunteer.skills.all %}
+                <label>{{ skill }}</label>
+                {% endfor %}
+            </td>
+            <td>{{ event.organization }}</td>
+            <td>
+                <form action="{% url 'nonprofit:update' event.id %}" method="POST">
+                    {% csrf_token %}
+                    <button>update</button>
+                </form>
+            </td>
+            <td>
+                <form action="{% url 'nonprofit:delete' event.id %}" method="POST">
+                    {% csrf_token %}
+                    <button>delete</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<form action="{% url 'nonprofit:insert' %}" method="POST">
+    {% csrf_token %}
+    <button>insert</button>
+</form>
+</body>
+</html>

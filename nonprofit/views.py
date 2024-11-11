@@ -1,14 +1,39 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import Volunteer
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic import UpdateView, CreateView
+from .models import Volunteer, VolunteerForm, EventForm, Event
 
 
 def index(request):
-    volunteers = Volunteer.objects.all()
+    return render(request, 'nonprofit/index.html')
 
-    response_content = ""
-    for volunteer in volunteers:
-        skills_list = ", ".join([skill.name for skill in volunteer.skills.all()])
-        response_content += f"{volunteer.name} - Skills: {skills_list}<br>"
 
-    return HttpResponse(response_content)
+def volunteer_home(request):
+    volunteer_list = Volunteer.objects.all()
+    return render(request, 'nonprofit/volunteer.html', {'volunteer_list': volunteer_list})
+
+
+def event_home(request):
+    event_list = Event.objects.all()
+    return render(request, 'nonprofit/event.html', {'event_list': event_list})
+
+
+class UpdateVolunteerDetail(UpdateView):
+    model = Volunteer
+    template_name = "nonprofit/update.html"
+    form_class = VolunteerForm
+    success_url = reverse_lazy('nonprofit:volunteer_home')
+
+
+class InsertVolunteer(CreateView):
+    model = Volunteer
+    template_name = "nonprofit/insert.html"
+    form_class = VolunteerForm
+    success_url = reverse_lazy('nonprofit:volunteer_home')
+
+
+def delete_volunteer(request, pk):
+    volunteer = Volunteer.objects.get(pk=pk)
+    if request.method == 'POST':
+        volunteer.delete()
+        return redirect('nonprofit:volunteer_home')

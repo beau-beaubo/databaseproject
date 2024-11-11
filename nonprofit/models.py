@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 
 class Category(models.Model):
@@ -52,3 +53,17 @@ class Participation(models.Model):
     def __str__(self):
         return f"{self.volunteer} participated in {self.event}"
 
+
+class EventForm(forms.ModelForm):
+    class Meta:
+        model = Event
+        fields = ["name", "description", "date", "location", "category"]
+
+
+class VolunteerForm(forms.ModelForm):
+    class Meta:
+        model = Volunteer
+        fields = ['name', 'email', 'skills']
+        widgets = {
+            'skills': forms.CheckboxSelectMultiple,
+        }

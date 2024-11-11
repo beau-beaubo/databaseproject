@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Skill</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for volunteer in volunteer_list %}
+        <tr>
+            <td>{{ volunteer.name }}</td>
+            <td>{{ volunteer.email }}</td>
+            <td>
+                {% for skill in volunteer.skills.all %}
+                <label>{{ skill }}</label>
+                {% endfor %}
+            </td>
+            <td>
+                <form action="{% url 'nonprofit:update' volunteer.id %}" method="POST">
+                    {% csrf_token %}
+                    <button>update</button>
+                </form>
+            </td>
+            <td>
+                <form action="{% url 'nonprofit:delete' volunteer.id %}" method="POST">
+                    {% csrf_token %}
+                    <button>delete</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<form action="{% url 'nonprofit:insert' %}" method="POST">
+    {% csrf_token %}
+    <button>insert</button>
+</form>
+</body>
+</html>
