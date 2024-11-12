@@ -7,53 +7,114 @@
 </head>
 <body>
 <!-- Button trigger modal -->
-<button data-bs-toggle="modal" data-bs-target="#insertOrganization">
+<button data-bs-toggle="modal" data-bs-target="#InsertOrganizationModal">
     insert organization
 </button>
 
-<!-- Insert Organization Modal -->
-<div class="modal fade" id="insertOrganization" tabindex="-1" aria-labelledby="organizationInsertModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="organizationInsertModalLabel">Insert Organization</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="{% url 'nonprofit:insert_organization' %}" method="POST">
-            {% csrf_token %}
-            {{ organization_form.as_p }}
-            <button type="submit" class="btn btn-primary">Insert</button>
-        </form>
-      </div>
+<!-- ======= Modal of Insert Organization======= -->
+    <div class="modal" tabindex="-1" id="InsertOrganizationModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Insert New Organization</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addOrganizationForm" method="POST" action="{% url 'nonprofit:insert_organization' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="organizationName" class="form-label">Organization Name</label>
+                            <input type="text" class="form-control" name="name" id="organizationName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="organizationDescription" class="form-label">Description</label>
+                            <input type="text" class="form-control" name="description" id="organizationDescription" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary fade-button">insert</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 <!-- Button trigger modal -->
-<button data-bs-toggle="modal" data-bs-target="#insertCategory">
+<button data-bs-toggle="modal" data-bs-target="#InsertCategoryModal">
     insert category
 </button>
 
-<!-- Insert Organization Modal -->
-<div class="modal fade" id="insertCategory" tabindex="-1" aria-labelledby="categoryInsertModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="categoryInsertModalLabel">Insert Category</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="{% url 'nonprofit:insert_category' %}" method="POST">
-            {% csrf_token %}
-            {{ category_form.as_p }}
-            <button type="submit" class="btn btn-primary">Insert</button>
-        </form>
-      </div>
+<!-- ======= Modal of Insert Category======= -->
+    <div class="modal" tabindex="-1" id="InsertCategoryModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Insert New Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addCategoryForm" method="POST" action="{% url 'nonprofit:insert_category' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="categoryName" class="form-label">Category Name</label>
+                            <input type="text" class="form-control" name="name" id="categoryName" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary fade-button">insert</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
+<!-- ======= Modal of Insert Event======= -->
+<div class="modal" tabindex="-1" id="InsertEventModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update Event Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="insertVolunteerForm" method="POST" action="{% url 'nonprofit:insert_event' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="eventName" class="form-label">Event Name</label>
+                        <input type="text" class="form-control" name="name" id="eventName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventDescription" class="form-label">Description</label>
+                        <input type="text" class="form-control" name="description" id="eventDescription" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventDateTime" class="form-label">Date and Time</label>
+                        <input type="datetime-local" class="form-control" name="date" id="eventDateTime" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventLocation" class="form-label">Location</label>
+                        <input type="text" class="form-control" name="location" id="eventLocation" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventCategory" class="form-label">Category</label>
+                        <select class="form-control" name="category" id="eventCategory" required>
+                            <option value="" disabled>Select a category</option>
+                            {% for category in category_list %}
+                            <option value="{{ category.id }}" {% if category.id == event.category.id %}selected{% endif %}>{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventOrganization" class="form-label">Organization</label>
+                        <select class="form-control" name="organization" id="eventOrganization" required>
+                            <option value="" disabled>Select a organization</option>
+                            {% for organization in organization_list %}
+                            <option value="{{ organization.id }}" {% if organization.id == event.organization.id %}selected{% endif %}>{{ organization.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary fade-button">save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <table>
     <thead>
         <tr>
@@ -72,37 +133,65 @@
             <td>{{ event.description }}</td>
             <td>{{ event.date }}</td>
             <td>{{ event.location }}</td>
-            <td>
-                {% for skill in volunteer.skills.all %}
-                <label>{{ skill }}</label>
-                {% endfor %}
-            </td>
+            <td>{{ event.category }}</td>
             <td>{{ event.organization }}</td>
             <td>
-                <button data-bs-toggle="modal" data-bs-target="#updateEvent">
+                <button data-bs-toggle="modal" data-bs-target="#updateEventModal-{{ event.id }}">
                     update
                 </button>
-                <!-- Update Event Modal -->
-                <div class="modal fade" id="updateEvent" tabindex="-1" aria-labelledby="eventUpdateModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="eventUpdateModalLabel">Update Event Details</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form action="{% url 'nonprofit:update_event' event.id %}" method="POST">
-                            {% csrf_token %}
-                            {{ event_form.as_p }}
-                            <button type="submit" class="btn btn-primary">Update</button>
-                        </form>
-                      </div>
+                <!-- ======= Modal of Update Event======= -->
+                <div class="modal" tabindex="-1" id="updateEventModal-{{ event.id }}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Update Event Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="updateVolunteerForm" method="POST" action="{% url 'nonprofit:update_event' event.id %}">
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <label for="eventName" class="form-label">Event Name</label>
+                                        <input type="text" class="form-control" name="name" id="eventName" value="{{ event.name }}" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventDescription" class="form-label">Description</label>
+                                        <input type="text" class="form-control" name="description" id="eventDescription" value="{{ event.description }}" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventDateTime" class="form-label">Date and Time</label>
+                                        <input type="datetime-local" class="form-control" name="date" id="eventDateTime"
+                                               value="{{ event.date|date:'Y-m-d\TH:i' }}" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventLocation" class="form-label">Location</label>
+                                        <input type="text" class="form-control" name="location" id="eventLocation" value="{{ event.location }}" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventCategory" class="form-label">Category</label>
+                                        <select class="form-control" name="category" id="eventCategory" required>
+                                            <option value="" disabled>Select a category</option>
+                                            {% for category in category_list %}
+                                                <option value="{{ category.id }}" {% if category.id == event.category.id %}selected{% endif %}>{{ category.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventOrganization" class="form-label">Organization</label>
+                                        <select class="form-control" name="organization" id="eventOrganization" required disabled>
+                                            <option value="{{ event.organization.id }}" selected>{{ event.organization.name }}</option>
+                                        </select>
+                                        <input type="hidden" name="organization" value="{{ event.organization.id }}">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary fade-button">save</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </td>
             <td>
-                <form action="{% url 'nonprofit:delete' event.id %}" method="POST">
+                <form action="{% url 'nonprofit:delete_event' event.id %}" method="POST">
                     {% csrf_token %}
                     <button>delete</button>
                 </form>
@@ -111,10 +200,9 @@
     {% endfor %}
     </tbody>
 </table>
-<form action="{% url 'nonprofit:insert_event' %}" method="POST">
-    {% csrf_token %}
-    <button>insert</button>
-</form>
+<button data-bs-toggle="modal" data-bs-target="#InsertEventModal">
+    insert event
+</button>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

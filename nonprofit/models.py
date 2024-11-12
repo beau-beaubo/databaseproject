@@ -57,7 +57,7 @@ class Participation(models.Model):
 class EventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ["name", "description", "date", "location", "category"]
+        fields = "__all__"
 
 
 class VolunteerForm(forms.ModelForm):

@@ -1,7 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse_lazy
+from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.views.generic import UpdateView, CreateView
 from .models import (Volunteer, VolunteerForm, EventForm, Event,
                      Skill, SkillForm, CategoryForm, Category, OrganizationForm, Organization)
 
@@ -11,59 +9,47 @@ def index(request):
 
 
 def volunteer_home(request):
-    print("mi")
     volunteer_list = Volunteer.objects.all()
-    return render(request, 'nonprofit/volunteer.html', {'volunteer_list': volunteer_list})
+    skill_list = Skill.objects.all()
+    return render(request, 'nonprofit/volunteer.html', {'volunteer_list': volunteer_list,
+                                                        'skill_list': skill_list})
 
 
 def event_home(request):
     event_list = Event.objects.all()
-    event_form = EventForm
-    organization_form = OrganizationForm
-    category_form = CategoryForm
+    category_list = Category.objects.all()
+    organization_list = Organization.objects.all()
     return render(request, 'nonprofit/event.html', {'event_list': event_list,
-                                                    'organization_form': organization_form,
-                                                    'category_form': category_form,
-                                                    'event_form': event_form})
-
-
-# class UpdateVolunteerDetail(UpdateView):
-#     model = Volunteer
-#     form_class = VolunteerForm(instance=model)
-#     template_name = "nonprofit/volunteer.html"
-#     success_url = reverse_lazy('nonprofit:volunteer_home')
-#
-#     def get_form_kwargs(self):
-#         kwargs = super().get_form_kwargs()
-#         # Ensure the form is populated with the correct instance
-#         kwargs['instance'] = self.get_object()  # This gets the specific volunteer instance for the update view
-#         return kwargs
+                                                    'category_list': category_list,
+                                                    'organization_list': organization_list})
 
 
 def update_volunteer_details(request, pk):
-    print("mim")
     try:
         volunteer = Volunteer.objects.get(pk=pk)
         if request.method == 'POST':
             volunteer_form = VolunteerForm(request.POST, instance=volunteer)
             if volunteer_form.is_valid():
                 volunteer_form.save()
-                messages.success(request, "Successfully update volunteer details!")
+                messages.success(request, "Successfully updated volunteer details!")
                 return redirect('nonprofit:volunteer_home')
         else:
             volunteer_form = VolunteerForm(instance=volunteer)
+        return render(request, 'nonprofit/volunteer.html', {'volunteer_form': volunteer_form})
     except Volunteer.DoesNotExist:
-        messages.error(request, "Volunteer not found.")
-        return redirect('nonprofit:volunteer_home')
+        messages.error(request, "Can't find this volunteer")
+
+
+def insert_volunteer(request):
+    if request.method == 'POST':
+        volunteer_form = VolunteerForm(request.POST)
+        if volunteer_form.is_valid():
+            volunteer_form.save()
+            messages.success(request, "Successfully insert volunteer!")
+            return redirect('nonprofit:volunteer_home')
+    else:
+        volunteer_form = VolunteerForm()
     return render(request, 'nonprofit/volunteer.html', {'volunteer_form': volunteer_form})
-
-
-class InsertVolunteer(CreateView):
-    print("ooo")
-    model = Volunteer
-    template_name = "nonprofit/volunteer.html"
-    form_class = VolunteerForm
-    success_url = reverse_lazy('nonprofit:volunteer_home')
 
 
 def delete_volunteer(request, pk):
@@ -73,41 +59,76 @@ def delete_volunteer(request, pk):
         return redirect('nonprofit:volunteer_home')
 
 
-class InsertSkill(CreateView):
-    model = Skill
-    form_class = SkillForm
-    template_name = "nonprofit/volunteer.html"
-    success_url = reverse_lazy('nonprofit:volunteer_home')
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form'] = self.get_form()
-        return context
-
-
-class InsertCategory(CreateView):
-    model = Category
-    form_class = CategoryForm
-    template_name = "nonprofit/event.html"
-    success_url = reverse_lazy('nonprofit:event_home')
+def insert_skill(request):
+    if request.method == 'POST':
+        skill_form = SkillForm(request.POST)
+        if skill_form.is_valid():
+            skill_form.save()
+            messages.success(request, "Successfully insert skill!")
+            return redirect('nonprofit:volunteer_home')
+    else:
+        skill_form = SkillForm()
+    return render(request, 'nonprofit/volunteer.html', {'skill_form': skill_form})
 
 
-class InsertOrganization(CreateView):
-    model = Organization
-    form_class = OrganizationForm
-    template_name = "nonprofit/event.html"
-    success_url = reverse_lazy('nonprofit:event_home')
+def insert_category(request):
+    if request.method == 'POST':
+        category_form = CategoryForm(request.POST)
+        if category_form.is_valid():
+            category_form.save()
+            messages.success(request, "Successfully insert category!")
+            return redirect('nonprofit:event_home')
+    else:
+        category_form = SkillForm()
+    return render(request, 'nonprofit/event.html', {'category_form': category_form})
 
 
-class UpdateEventDetail(UpdateView):
-    model = Event
-    form_class = EventForm
-    template_name = "nonprofit/event.html"
-    success_url = reverse_lazy('nonprofit:event_home')
+def insert_organization(request):
+    if request.method == 'POST':
+        organization_form = OrganizationForm(request.POST)
+        if organization_form.is_valid():
+            organization_form.save()
+            messages.success(request, "Successfully insert organization!")
+            return redirect('nonprofit:event_home')
+    else:
+        organization_form = OrganizationForm()
+    return render(request, 'nonprofit/event.html', {'organization_form': organization_form})
 
 
-class InsertEvent(CreateView):
-    model = Event
-    form_class = EventForm
-    template_name = "nonprofit/event.html"
-    success_url = reverse_lazy('nonprofit:event_home')
+def update_event_details(request, pk):
+    try:
+        event = Event.objects.get(pk=pk)
+        if request.method == 'POST':
+            event_form = EventForm(request.POST, instance=event)
+            if event_form.is_valid():
+                event_form.save()
+                messages.success(request, "Successfully updated event details!")
+                return redirect('nonprofit:event_home')
+        else:
+            event_form = EventForm(instance=event)
+        return render(request, 'nonprofit/volunteer.html', {'event_form': event_form})
+    except Event.DoesNotExist:
+        messages.error(request, "Can't find this event")
+
+
+def insert_event(request):
+    if request.method == 'POST':
+        event_form = EventForm(request.POST)
+        if event_form.is_valid():
+            event_form.save()
+            messages.success(request, "Successfully insert event!")
+            return redirect('nonprofit:event_home')
+    else:
+        event_form = EventForm()
+    return render(request, 'nonprofit/event.html', {'event_form': event_form})
+
+
+def delete_event(request, pk):
+    try:
+        event = Event.objects.get(pk=pk)
+        if request.method == 'POST':
+            event.delete()
+            return redirect('nonprofit:event_home')
+        return render(request, 'nonprofit/event.html')
+    except Event.DoesNotExist:
+        messages.error(request, "Can't find this event")

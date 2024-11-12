@@ -2,77 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Entry</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<!--&lt;!&ndash; Button trigger modal &ndash;&gt;-->
-<!--<button data-bs-toggle="modal" data-bs-target="#insertSkill">-->
-<!--    insert skill-->
-<!--</button>-->
-
-<!--&lt;!&ndash; Insert Skill Modal &ndash;&gt;-->
-<!--<div class="modal fade" id="insertSkill" tabindex="-1" aria-labelledby="skilInsertModalLabel" aria-hidden="true">-->
-<!--  <div class="modal-dialog">-->
-<!--    <div class="modal-content">-->
-<!--      <div class="modal-header">-->
-<!--        <h1 class="modal-title fs-5" id="skilInsertModalLabel">Insert Skill</h1>-->
-<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--      </div>-->
-<!--      <div class="modal-body">-->
-<!--        <form action="{% url 'nonprofit:insert_skill' %}" method="POST">-->
-<!--            {% csrf_token %}-->
-<!--            {{ skill_form.as_p }}-->
-<!--            <button type="submit" class="btn btn-primary">Insert</button>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--&lt;!&ndash; Insert Volunteer Modal &ndash;&gt;-->
-<!--<div class="modal fade" id="insertVolunteer" tabindex="-1" aria-labelledby="volunteerInsertModalLabel" aria-hidden="true">-->
-<!--  <div class="modal-dialog">-->
-<!--    <div class="modal-content">-->
-<!--      <div class="modal-header">-->
-<!--        <h1 class="modal-title fs-5" id="volunteerInsertModalLabel">Insert Volunteer</h1>-->
-<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--      </div>-->
-<!--      <div class="modal-body">-->
-<!--        <form action="{% url 'nonprofit:insert_volunteer' %}" method="POST">-->
-<!--            {% csrf_token %}-->
-<!--            {{ volunteer_form.as_p }}-->
-<!--            <button type="submit" class="btn btn-primary">Insert</button>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!-- Update Volunteer Modal -->
-{% for volunteer in volunteer_list %}
-<div class="modal fade" id="updateVolunteer{{ volunteer.id }}" tabindex="-1" aria-labelledby="volunteerUpdateModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="volunteerUpdateModalLabel">Update Volunteer Details</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="{% url 'nonprofit:update_volunteer' volunteer.id %}" method="POST">
-                    {% csrf_token %}
-                    {{ volunteer_form.as_p }}
-                    <!-- Optionally remove or adjust this line to better display the volunteer's ID -->
-                    <input type="hidden" name="volunteer_id" value="{{ volunteer.id }}">
-                    <button type="submit" class="btn btn-primary">Update</button>
-                </form>
+<div class="container">
+    <br>
+    <br>
+    <!-- ======= Modal of Insert Skill======= -->
+    <div class="modal" tabindex="-1" id="InsertSkillModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Insert New Skill</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addSkillForm" method="POST" action="{% url 'nonprofit:insert_skill' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="skillName" class="form-label">Skill Name</label>
+                            <input type="text" class="form-control" name="name" id="skillName" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary fade-button">insert</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <!-- ======= Modal of Insert Volunteer======= -->
+    <div class="modal" tabindex="-1" id="InsertVolunteerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Insert New Volunteer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addVolunteerForm" method="POST" action="{% url 'nonprofit:insert_volunteer' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="volunteerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" id="volunteerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="volunteerEmail" class="form-label">Email</label>
+                            <input type="text" class="form-control" name="email" id="volunteerEmail" required>
+                        </div>
+                         <div class="mb-3">
+                            <label for="volunteerSkills" class="form-label">Skills</label>
+                            <div>
+                                {% for skill in skill_list %}
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="skills" value="{{ skill.id }}" id="skill-{{ skill.id }}">
+                                        <label class="form-check-label" for="skill-{{ skill.id }}">
+                                            {{ skill.name }}
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary fade-button">insert</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-3">
+        {% for volunteer in volunteer_list %}
+        <!-- ======= Modal of Update Volunteer======= -->
+        <div class="modal" tabindex="-1" id="updateVolunteerModal-{{ volunteer.id }}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Volunteer Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="updateVolunteerForm" method="POST" action="{% url 'nonprofit:update_volunteer' volunteer.id %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="volunteerName" class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" id="volunteerName" value="{{ volunteer.name }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="volunteerEmail" class="form-label">Email</label>
+                                <input type="text" class="form-control" name="email" id="volunteerEmail" value="{{ volunteer.email }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="volunteerSkills" class="form-label">Skills</label>
+                                <div>
+                                    {% for skill in skill_list %}
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="skills" value="{{ skill.id }}" id="skill-{{ skill.id }}">
+                                            <label class="form-check-label" for="skill-{{ skill.id }}">
+                                                {{ skill.name }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary fade-button">save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
-
-{% endfor %}
-
 <table>
     <thead>
         <tr>
@@ -92,12 +130,12 @@
                 {% endfor %}
             </td>
             <td>
-                <button data-bs-toggle="modal" data-bs-target="#updateVolunteer{{ volunteer.id }}">
+                <button data-bs-toggle="modal" data-bs-target="#updateVolunteerModal-{{ volunteer.id }}">
                     update
                 </button>
             </td>
             <td>
-                <form action="{% url 'nonprofit:delete' volunteer.id %}" method="POST">
+                <form action="{% url 'nonprofit:delete_volunteer' volunteer.id %}" method="POST">
                     {% csrf_token %}
                     <button>delete</button>
                 </form>
@@ -107,8 +145,11 @@
     </tbody>
 </table>
 
-<button data-bs-toggle="modal" data-bs-target="#insertVolunteer">
+<button data-bs-toggle="modal" data-bs-target="#InsertVolunteerModal">
     insert volunteer
+</button>
+<button data-bs-toggle="modal" data-bs-target="#InsertSkillModal">
+    insert skill
 </button>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
