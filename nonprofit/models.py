@@ -67,3 +67,21 @@ class VolunteerForm(forms.ModelForm):
         widgets = {
             'skills': forms.CheckboxSelectMultiple,
         }
+
+
+class SkillForm(forms.ModelForm):
+    class Meta:
+        model = Skill
+        fields = "__all__"
+
+
+class OrganizationForm(forms.ModelForm):
+    class Meta:
+        model = Organization
+        fields = "__all__"
+
+
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = "__all__"
