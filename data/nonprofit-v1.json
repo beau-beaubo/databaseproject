@@ -1,0 +1,302 @@
+[
+{
+  "model": "nonprofit.category",
+  "pk": 3,
+  "fields": {
+    "name": "Community service"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 4,
+  "fields": {
+    "name": "Environmental Conservation"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 5,
+  "fields": {
+    "name": "Education and Tutoring"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 6,
+  "fields": {
+    "name": "Health and Wellness"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 7,
+  "fields": {
+    "name": "Creativity"
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 2,
+  "fields": {
+    "name": "Hopeful Hands Co.",
+    "description": "Building a network of hope, kindness, and support for underserved communities, one helping hand at a time."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 3,
+  "fields": {
+    "name": "Bright Path Foundation",
+    "description": "Empowering individuals and communities to find a brighter future through education, health, and support services."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 4,
+  "fields": {
+    "name": "Generous Giving Co",
+    "description": "Fostering a culture of generosity and kindness by connecting donors and volunteers with meaningful causes."
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 2,
+  "fields": {
+    "name": "Learn & Lead",
+    "description": "A mentorship day where volunteers provide career talks, workshops, and tutoring.",
+    "date": "2024-11-20T05:00:00Z",
+    "location": "Bangkok",
+    "category": 5,
+    "organization": 3
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 3,
+  "fields": {
+    "name": "Books & Buddies",
+    "description": "A literacy-focused event pairing volunteers with young readers to encourage a love for books.",
+    "date": "2024-11-18T05:00:00Z",
+    "location": "Bangkok",
+    "category": 5,
+    "organization": 3
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 4,
+  "fields": {
+    "name": "Caring Hearts Day",
+    "description": "A volunteer event in support of elderly care centers, hospitals, and other health services.",
+    "date": "2024-11-29T05:00:00Z",
+    "location": "Bangkok",
+    "category": 6,
+    "organization": 2
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 6,
+  "fields": {
+    "name": "Canvas of Care",
+    "description": "Volunteers paint and personalize canvases that are donated to shelters, nursing homes, or community centers, filling spaces with caring and vibrant artwork.",
+    "date": "2024-11-22T05:00:00Z",
+    "location": "Bangkok",
+    "category": 7,
+    "organization": 3
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 10,
+  "fields": {
+    "name": "Public Speaking"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 11,
+  "fields": {
+    "name": "Tutoring"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 13,
+  "fields": {
+    "name": "Basic Nursing"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 14,
+  "fields": {
+    "name": "Art"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 13,
+  "fields": {
+    "name": "Parima",
+    "email": "parima.a@gmail.com",
+    "skills": [
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 14,
+  "fields": {
+    "name": "Ravewaan",
+    "email": "ravewaan.n@gmail.com",
+    "skills": [
+      10,
+      13
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 16,
+  "fields": {
+    "name": "Natcha",
+    "email": "natcha.a@gmail.com",
+    "skills": [
+      13
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 17,
+  "fields": {
+    "name": "Natawipa",
+    "email": "natawipa.a@gmail.com",
+    "skills": [
+      10
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 18,
+  "fields": {
+    "name": "Panida",
+    "email": "panida.a@gmail.com",
+    "skills": [
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 19,
+  "fields": {
+    "name": "Swischaya",
+    "email": "swischaya.a@gmail.com",
+    "skills": [
+      14
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 20,
+  "fields": {
+    "name": "Yatichapat",
+    "email": "yatichapat.t@gmail.com",
+    "skills": [
+      11,
+      13
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 21,
+  "fields": {
+    "name": "Laorchan",
+    "email": "laorchan.n@gmail.com",
+    "skills": [
+      10
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 22,
+  "fields": {
+    "name": "Kwanruetai",
+    "email": "kwanruetai.i@gmail.com",
+    "skills": [
+      10
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 23,
+  "fields": {
+    "name": "Jaiphisut",
+    "email": "jaiphisut.t@gmail.com",
+    "skills": [
+      11
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 24,
+  "fields": {
+    "name": "Dujupsorn",
+    "email": "dujupsorn.n@gmail.com",
+    "skills": [
+      10
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 25,
+  "fields": {
+    "name": "Poncheewan",
+    "email": "poncheewan.a@gmail.com",
+    "skills": [
+      13
+    ]
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 26,
+  "fields": {
+    "name": "Tharathorn",
+    "email": "tharathorn.n@gmail.com",
+    "skills": [
+      14
+    ]
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 2,
+  "fields": {
+    "event": 2,
+    "volunteer": 14,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 6,
+  "fields": {
+    "event": 2,
+    "volunteer": 13,
+    "hours_contributed": 3
+  }
+}
+]
