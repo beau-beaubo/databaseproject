@@ -181,3 +181,30 @@ def delete_participation(request, pk):
         return render(request, 'nonprofit/participation.html')
     except Participation.DoesNotExist:
         messages.error(request, "Can't find this participation")
+
+
+def filter_event_by_category(request, pk):
+    try:
+        category = Category.objects.get(pk=pk)
+        event_list = Event.objects.filter(category=category)
+        return render(request, 'nonprofit:event.html', {'event_list': event_list})
+    except Category.DoesNotExist:
+        messages.error(request, "Can't find this category")
+
+
+def filter_event_by_organization(request, pk):
+    try:
+        organization = Organization.objects.get(pk=pk)
+        event_list = Event.objects.filter(organization=organization)
+        return render(request, 'nonprofit:event.html', {'event_list': event_list})
+    except Organization.DoesNotExist:
+        messages.error(request, "Can't find this organization")
+
+
+def filter_volunteer_by_skill(request, pk):
+    try:
+        skill = Skill.objects.get(pk=pk)
+        volunteer_list = Volunteer.objects.filter(skills=skill)
+        return render(request, 'nonprofit:volunteer.html', {'volunteer_list': volunteer_list})
+    except Volunteer.DoesNotExist:
+        messages.error(request, "Can't find this skill")
