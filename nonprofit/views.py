@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import (Volunteer, VolunteerForm, EventForm, Event,
-                     Skill, SkillForm, CategoryForm, Category, OrganizationForm, Organization)
+                     Skill, SkillForm, CategoryForm, Category, OrganizationForm,
+                     Organization, Participation, ParticipationForm)
 
 
 def index(request):
@@ -132,3 +133,78 @@ def delete_event(request, pk):
         return render(request, 'nonprofit/event.html')
     except Event.DoesNotExist:
         messages.error(request, "Can't find this event")
+
+
+def participation_home(request):
+    participation_list = Participation.objects.all()
+    volunteer_list = Volunteer.objects.all()
+    event_list = Event.objects.all()
+    return render(request, 'nonprofit/participation.html',
+                  {'participation_list': participation_list,
+                   'volunteer_list': volunteer_list, 'event_list': event_list})
+
+
+def insert_participation(request):
+    if request.method == 'POST':
+        participation_form = ParticipationForm(request.POST)
+        if participation_form.is_valid():
+            participation_form.save()
+            messages.success(request, "Successfully insert participation!")
+            return redirect('nonprofit:participation_home')
+    else:
+        participation_form = ParticipationForm()
+    return render(request, 'nonprofit/participation.html', {'participation_form': participation_form})
+
+
+def update_participation_details(request, pk):
+    try:
+        participation = Participation.objects.get(pk=pk)
+        if request.method == 'POST':
+            participation_form = ParticipationForm(request.POST, instance=participation)
+            if participation_form.is_valid():
+                participation_form.save()
+                messages.success(request, "Successfully updated participation details!")
+                return redirect('nonprofit:participation_home')
+        else:
+            participation_form = EventForm(instance=participation)
+        return render(request, 'nonprofit/participation.html', {'participation_form': participation_form})
+    except Participation.DoesNotExist:
+        messages.error(request, "Can't find this participation")
+
+
+def delete_participation(request, pk):
+    try:
+        participation = Participation.objects.get(pk=pk)
+        if request.method == 'POST':
+            participation.delete()
+            return redirect('nonprofit:participation_home')
+        return render(request, 'nonprofit/participation.html')
+    except Participation.DoesNotExist:
+        messages.error(request, "Can't find this participation")
+
+
+def filter_event_by_category(request, pk):
+    try:
+        category = Category.objects.get(pk=pk)
+        event_list = Event.objects.filter(category=category)
+        return render(request, 'nonprofit:event.html', {'event_list': event_list})
+    except Category.DoesNotExist:
+        messages.error(request, "Can't find this category")
+
+
+def filter_event_by_organization(request, pk):
+    try:
+        organization = Organization.objects.get(pk=pk)
+        event_list = Event.objects.filter(organization=organization)
+        return render(request, 'nonprofit:event.html', {'event_list': event_list})
+    except Organization.DoesNotExist:
+        messages.error(request, "Can't find this organization")
+
+
+def filter_volunteer_by_skill(request, pk):
+    try:
+        skill = Skill.objects.get(pk=pk)
+        volunteer_list = Volunteer.objects.filter(skills=skill)
+        return render(request, 'nonprofit:volunteer.html', {'volunteer_list': volunteer_list})
+    except Volunteer.DoesNotExist:
+        messages.error(request, "Can't find this skill")
