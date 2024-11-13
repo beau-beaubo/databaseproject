@@ -16,12 +16,27 @@ def volunteer_home(request):
 
 
 def event_home(request):
-    event_list = Event.objects.all()
     category_list = Category.objects.all()
     organization_list = Organization.objects.all()
-    return render(request, 'nonprofit/event.html', {'event_list': event_list,
-                                                    'category_list': category_list,
-                                                    'organization_list': organization_list})
+
+    category_filter = request.GET.get('category', '')
+    organization_filter = request.GET.get('organization', '')
+
+    event_list = Event.objects.all()
+
+    if category_filter:
+        event_list = event_list.filter(category__id=category_filter)
+
+    if organization_filter:
+        event_list = event_list.filter(organization__id=organization_filter)
+
+    return render(request, 'nonprofit/event.html', {
+        'event_list': event_list,
+        'category_list': category_list,
+        'organization_list': organization_list,
+        'category_filter': category_filter,
+        'organization_filter': organization_filter,
+    })
 
 
 def update_volunteer_details(request, pk):
