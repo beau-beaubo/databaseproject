@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import (Volunteer, VolunteerForm, EventForm, Event,
-                     Skill, SkillForm, CategoryForm, Category, OrganizationForm, Organization)
+                     Skill, SkillForm, CategoryForm, Category, OrganizationForm,
+                     Organization, Participation)
 
 
 def index(request):
@@ -16,27 +17,12 @@ def volunteer_home(request):
 
 
 def event_home(request):
+    event_list = Event.objects.all()
     category_list = Category.objects.all()
     organization_list = Organization.objects.all()
-
-    category_filter = request.GET.get('category', '')
-    organization_filter = request.GET.get('organization', '')
-
-    event_list = Event.objects.all()
-
-    if category_filter:
-        event_list = event_list.filter(category__id=category_filter)
-
-    if organization_filter:
-        event_list = event_list.filter(organization__id=organization_filter)
-
-    return render(request, 'nonprofit/event.html', {
-        'event_list': event_list,
-        'category_list': category_list,
-        'organization_list': organization_list,
-        'category_filter': category_filter,
-        'organization_filter': organization_filter,
-    })
+    return render(request, 'nonprofit/event.html', {'event_list': event_list,
+                                                    'category_list': category_list,
+                                                    'organization_list': organization_list})
 
 
 def update_volunteer_details(request, pk):
@@ -147,3 +133,30 @@ def delete_event(request, pk):
         return render(request, 'nonprofit/event.html')
     except Event.DoesNotExist:
         messages.error(request, "Can't find this event")
+
+
+def filter_event_by_category(request, pk):
+    try:
+        category = Category.objects.get(pk=pk)
+        event_list = Event.objects.filter(category=category)
+        return render(request, 'nonprofit:event.html', {'event_list': event_list})
+    except Category.DoesNotExist:
+        messages.error(request, "Can't find this category")
+
+
+def filter_event_by_organization(request, pk):
+    try:
+        organization = Organization.objects.get(pk=pk)
+        event_list = Event.objects.filter(organization=organization)
+        return render(request, 'nonprofit:event.html', {'event_list': event_list})
+    except Organization.DoesNotExist:
+        messages.error(request, "Can't find this organization")
+
+
+def filter_volunteer_by_skill(request, pk):
+    try:
+        skill = Skill.objects.get(pk=pk)
+        volunteer_list = Volunteer.objects.filter(skills=skill)
+        return render(request, 'nonprofit:volunteer.html', {'volunteer_list': volunteer_list})
+    except Volunteer.DoesNotExist:
+        messages.error(request, "Can't find this skill")
