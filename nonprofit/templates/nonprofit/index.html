@@ -13,5 +13,9 @@
     {% csrf_token %}
     <button>event</button>
 </form>
+<form action="{% url 'nonprofit:participation_home' %}" method="POST">
+    {% csrf_token %}
+    <button>participation</button>
+</form>
 </body>
 </html>
