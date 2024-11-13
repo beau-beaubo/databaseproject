@@ -4,6 +4,7 @@
       background-color: #D4857A !important;
       border-color: #D4857A !important;
       color: white !important;
+      margin-right: 20px !important;
     }
 
     .btn-insert-event:hover {
@@ -16,6 +17,7 @@
       background-color: #D1926E !important;
       border-color: #D1926E !important;
       color: white !important;
+      margin-right: 20px !important;
     }
 
     .btn-insert-organization:hover {
@@ -56,7 +58,7 @@
     }
 
     .event-table th, .event-table td {
-        border: 2px solid white;
+        border: 3px solid white;
         padding: 12px;
         text-align: center;
     }
@@ -67,7 +69,7 @@
     }
 
     .event-table tr:nth-child(even) {
-        background-color: white;
+        background-color: #F4F1ED;
         color: #6D4B28;
     }
 
@@ -308,16 +310,14 @@
 
         filterBy.addEventListener('change', function () {
             const selectedOption = filterBy.value;
-            filter.innerHTML = '<option value="">Select an option</option>'; // Reset filter options
-            filter.disabled = selectedOption === 'all'; // Disable filter if "Show All" is selected
+            filter.innerHTML = '<option value="">Select an option</option>';
+            filter.disabled = selectedOption === 'all';
 
             let options = [];
             if (selectedOption === "organization") {
                 options = [{% for org in organization_list %}{ id: '{{ org.id }}', name: '{{ org.name }}' }, {% endfor %}];
             } else if (selectedOption === "category") {
                 options = [{% for cat in category_list %}{ id: '{{ cat.id }}', name: '{{ cat.name }}' }, {% endfor %}];
-            } else if (selectedOption === "location") {
-                options = [{% for event in event_list %}{ location: '{{ event.location }}' }, {% endfor %}];
             }
 
             options.forEach(option => {
@@ -335,22 +335,16 @@
             rows.forEach(row => {
                 const organization = row.getAttribute('data-organization');
                 const category = row.getAttribute('data-category');
-                const location = row.getAttribute('data-location');
 
                 let showRow = true;
 
-                // Filter by selected category, organization, or location
                 if (filterBy.value === 'organization' && organization !== selectedFilterValue) {
                     showRow = false;
                 }
                 if (filterBy.value === 'category' && category !== selectedFilterValue) {
                     showRow = false;
                 }
-                if (filterBy.value === 'location' && location !== selectedFilterValue) {
-                    showRow = false;
-                }
 
-                // Show or hide the row based on the filter
                 row.style.display = showRow ? '' : 'none';
             });
         });
