@@ -102,12 +102,5 @@ class ParticipationForm(forms.ModelForm):
         fields = "__all__"
 
 
-# class VolunteerSkillForm(forms.ModelForm):
-#     class Meta:
-#         model = VolunteerSkill
-#         fields = ['volunteer', 'skill']
-#         widgets = {
-#             'skill': forms.CheckboxSelectMultiple,
-#         }
 class VolunteerSkillForm(forms.Form):
     skills = forms.ModelMultipleChoiceField(queryset=Skill.objects.all(), widget=forms.CheckboxSelectMultiple)
