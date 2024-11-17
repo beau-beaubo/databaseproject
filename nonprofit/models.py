@@ -39,10 +39,20 @@ class Skill(models.Model):
 class Volunteer(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
-    skills = models.ManyToManyField(Skill)
 
     def __str__(self):
         return self.name
+
+
+class VolunteerSkill(models.Model):
+    volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE)
+    skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('volunteer', 'skill')
+
+    def __str__(self):
+        return f'{self.volunteer.name} - {self.skill.name}'
 
 
 class Participation(models.Model):
@@ -61,12 +71,11 @@ class EventForm(forms.ModelForm):
 
 
 class VolunteerForm(forms.ModelForm):
+    skills = forms.ModelMultipleChoiceField(queryset=Skill.objects.all(), widget=forms.CheckboxSelectMultiple)
+
     class Meta:
         model = Volunteer
         fields = ['name', 'email', 'skills']
-        widgets = {
-            'skills': forms.CheckboxSelectMultiple,
-        }
 
 
 class SkillForm(forms.ModelForm):
@@ -91,3 +100,7 @@ class ParticipationForm(forms.ModelForm):
     class Meta:
         model = Participation
         fields = "__all__"
+
+
+class VolunteerSkillForm(forms.Form):
+    skills = forms.ModelMultipleChoiceField(queryset=Skill.objects.all(), widget=forms.CheckboxSelectMultiple)

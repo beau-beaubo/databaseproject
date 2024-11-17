@@ -125,8 +125,10 @@
             <td>{{ volunteer.name }}</td>
             <td>{{ volunteer.email }}</td>
             <td>
-                {% for skill in volunteer.skills.all %}
-                <label>{{ skill }}</label>
+                {% for volunteer_skill in volunteer_skill_list %}
+                    {% if volunteer_skill.volunteer == volunteer %}
+                        <label>{{ volunteer_skill.skill }}, </label>
+                    {% endif %}
                 {% endfor %}
             </td>
             <td>

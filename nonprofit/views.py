@@ -5,7 +5,7 @@ from django.db.models import Max, Min, Avg, Count
 from django.db.models.functions import TruncMonth
 from .models import (Volunteer, VolunteerForm, EventForm, Event,
                      Skill, SkillForm, CategoryForm, Category, OrganizationForm,
-                     Organization, Participation, ParticipationForm)
+                     Organization, Participation, ParticipationForm, VolunteerSkillForm, VolunteerSkill)
 
 
 def index(request):
@@ -15,8 +15,10 @@ def index(request):
 def volunteer_home(request):
     volunteer_list = Volunteer.objects.all()
     skill_list = Skill.objects.all()
+    volunteer_skill_list = VolunteerSkill.objects.all()
     return render(request, 'nonprofit/volunteer.html', {'volunteer_list': volunteer_list,
-                                                        'skill_list': skill_list})
+                                                        'skill_list': skill_list,
+                                                        'volunteer_skill_list': volunteer_skill_list})
 
 
 def event_home(request):
@@ -31,29 +33,62 @@ def event_home(request):
 def update_volunteer_details(request, pk):
     try:
         volunteer = Volunteer.objects.get(pk=pk)
+        volunteer_skill = VolunteerSkill.objects.filter(volunteer_id=pk)
+        volunteer_skill.delete()
+
         if request.method == 'POST':
             volunteer_form = VolunteerForm(request.POST, instance=volunteer)
+            skill_form = VolunteerSkillForm(request.POST)
+            skill_ids = request.POST.getlist('skills')
+
             if volunteer_form.is_valid():
                 volunteer_form.save()
+
+                for skill_id in skill_ids:
+                    skill = Skill.objects.get(id=skill_id)
+                    VolunteerSkill.objects.create(volunteer=volunteer, skill=skill)
+
                 messages.success(request, "Successfully updated volunteer details!")
                 return redirect('nonprofit:volunteer_home')
+
         else:
+            # Initialize the volunteer form with the volunteer data
             volunteer_form = VolunteerForm(instance=volunteer)
-        return render(request, 'nonprofit/volunteer.html', {'volunteer_form': volunteer_form})
+            skill_form = VolunteerSkillForm()
+
+        return render(request, 'nonprofit/volunteer.html', {
+            'volunteer_form': volunteer_form,
+            'skill_form': skill_form,
+        })
+
     except Volunteer.DoesNotExist:
         messages.error(request, "Can't find this volunteer")
+        return redirect('nonprofit:volunteer_home')
 
 
 def insert_volunteer(request):
     if request.method == 'POST':
         volunteer_form = VolunteerForm(request.POST)
-        if volunteer_form.is_valid():
-            volunteer_form.save()
-            messages.success(request, "Successfully insert volunteer!")
+        skill_form = VolunteerSkillForm(request.POST)
+        skill_ids = request.POST.getlist('skills')
+
+        if volunteer_form.is_valid() and skill_form.is_valid():
+            volunteer = volunteer_form.save()
+
+            for skill_id in skill_ids:
+                skill = Skill.objects.get(id=skill_id)
+                VolunteerSkill.objects.create(volunteer=volunteer, skill=skill)
+
+            messages.success(request, "Volunteer and skills successfully added!")
             return redirect('nonprofit:volunteer_home')
     else:
         volunteer_form = VolunteerForm()
-    return render(request, 'nonprofit/volunteer.html', {'volunteer_form': volunteer_form})
+        skill_form = VolunteerSkillForm()
+
+    return render(request, 'nonprofit/volunteer.html', {
+        'volunteer_form': volunteer_form,
+        'skill_form': skill_form
+    })
 
 
 def delete_volunteer(request, pk):
@@ -218,11 +253,11 @@ def statistic_dashboard(request):
     ]
     event_per_month_json = json.dumps(event_per_month_list)
 
-    skill_counts = Skill.objects.annotate(volunteer_count=Count('volunteer')).all()
+    skill_counts = VolunteerSkill.objects.values('skill').annotate(volunteer_count=Count('volunteer')).all()
     skill_counts_list = [
-        {'skill': skill.name,
-         'volunteer_count': skill.volunteer_count
-         } for skill in skill_counts
+        {'skill': Skill.objects.get(pk=skill['skill']).name,
+         'volunteer_count': skill['volunteer_count']}
+        for skill in skill_counts
     ]
     skill_counts_json = json.dumps(skill_counts_list)
 
