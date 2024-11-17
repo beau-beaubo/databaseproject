@@ -1,0 +1,72 @@
+/*--NavBar--*/
+.navbar {
+    position: fixed; /* Navbar stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full-width navbar */
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav-links */
+    align-items: center;
+    padding: 10px 40px; /* Adjust padding for a clean look */
+    background-color: #6D4B28; /* Brown background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 24px; /* Adjust font size for logo */
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .nav-link {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-link li {
+    margin: 0 15px; /* Space between links */
+}
+
+.navbar .nav-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar .nav-link a:hover {
+    color: burlywood; /* Highlighted color on hover */
+}
+
+.navbar .nav-link .active a {
+    color: white;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar elements on small screens */
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .nav-link li {
+        margin: 10px 0; /* Add space between stacked items */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on small screens */
+        text-align: center;
+    }
+}
