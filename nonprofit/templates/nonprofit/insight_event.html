@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Contributions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        caption {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Event Contribution Analysis</h1>
+
+<section>
+    <h2>Volunteers with Maximum Hours Contributed</h2>
+    <p>The following table lists volunteers who contributed the most hours during the event:</p>
+    <table>
+        <caption>Top Contributors</caption>
+        <thead>
+            <tr>
+                <th>Volunteer</th>
+                <th>Hours Contributed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for participation in max_hours_list %}
+            <tr>
+                <td>{{ participation.volunteer }}</td>
+                <td>{{ participation.hours_contributed }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Volunteers with Minimum Hours Contributed</h2>
+    <p>The following table lists volunteers who contributed the least hours during the event:</p>
+    <table>
+        <caption>Lowest Contributors</caption>
+        <thead>
+            <tr>
+                <th>Volunteer</th>
+                <th>Hours Contributed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for participation in min_hours_list %}
+            <tr>
+                <td>{{ participation.volunteer }}</td>
+                <td>{{ participation.hours_contributed }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Average Hours Contributed</h2>
+    <p>The following table shows the average hours contributed by all volunteers:</p>
+    <table>
+        <caption>Average Contribution</caption>
+        <thead>
+            <tr>
+                <th>Average Hours Contributed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ avg_hours }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>
