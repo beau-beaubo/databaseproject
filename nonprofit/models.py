@@ -44,12 +44,6 @@ class Volunteer(models.Model):
         return self.name
 
 
-# class VolunteerSkill(models.Model):
-#     volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE)
-#     skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return f"{self.volunteer} - {self.skill}"
 class VolunteerSkill(models.Model):
     volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE)
     skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
