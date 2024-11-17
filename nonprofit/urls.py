@@ -20,7 +20,6 @@ urlpatterns = [
     path('insert/participation/', views.insert_participation, name='insert_participation'),
     path('<int:pk>/update/participation/', views.update_participation_details, name='update_participation'),
     path('<int:pk>/delete/participation/', views.delete_participation, name='delete_participation'),
-    path('<int:pk>/filterby/category/', views.filter_event_by_category, name='filter_by_category'),
-    path('<int:pk>/filterby/organization/', views.filter_event_by_organization, name='filter_by_organization'),
-    path('<int:pk>/filterby/skill/', views.filter_volunteer_by_skill, name='filter_by_skill'),
+    path('<int:pk>/insight/event/', views.insight_event, name='insight_event'),
+    path('statistic/', views.statistic_dashboard, name='statistic'),
 ]

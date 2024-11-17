@@ -1,5 +1,8 @@
+import json
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.db.models import Max, Min, Avg, Count
+from django.db.models.functions import TruncMonth
 from .models import (Volunteer, VolunteerForm, EventForm, Event,
                      Skill, SkillForm, CategoryForm, Category, OrganizationForm,
                      Organization, Participation, ParticipationForm)
@@ -133,6 +136,7 @@ def delete_event(request, pk):
         return render(request, 'nonprofit/event.html')
     except Event.DoesNotExist:
         messages.error(request, "Can't find this event")
+        return render(request, 'nonprofit/event.html')
 
 
 def participation_home(request):
@@ -181,30 +185,54 @@ def delete_participation(request, pk):
         return render(request, 'nonprofit/participation.html')
     except Participation.DoesNotExist:
         messages.error(request, "Can't find this participation")
+        return render(request, 'nonprofit/participation.html')
 
 
-def filter_event_by_category(request, pk):
+def insight_event(request, pk):
     try:
-        category = Category.objects.get(pk=pk)
-        event_list = Event.objects.filter(category=category)
-        return render(request, 'nonprofit:event.html', {'event_list': event_list})
-    except Category.DoesNotExist:
-        messages.error(request, "Can't find this category")
+        event = Event.objects.get(pk=pk)
+        max_hours = Participation.objects.filter(event=event
+                                                 ).aggregate(Max('hours_contributed'))['hours_contributed__max']
+        min_hours = Participation.objects.filter(event=event
+                                                 ).aggregate(Min('hours_contributed'))['hours_contributed__min']
+        avg_hours = Participation.objects.filter(event=event
+                                                 ).aggregate(Avg('hours_contributed'))['hours_contributed__avg']
+        max_hours_list = Participation.objects.filter(event=event, hours_contributed=max_hours)
+        min_hours_list = Participation.objects.filter(event=event, hours_contributed=min_hours)
+        return render(request, 'nonprofit/insight_event.html',
+                      {'max_hours_list': max_hours_list, 'min_hours_list': min_hours_list,
+                       'avg_hours': avg_hours})
+    except Event.DoesNotExist:
+        messages.error(request, "Can't find this event")
+        return render(request, 'nonprofit/insight_event.html')
 
 
-def filter_event_by_organization(request, pk):
-    try:
-        organization = Organization.objects.get(pk=pk)
-        event_list = Event.objects.filter(organization=organization)
-        return render(request, 'nonprofit:event.html', {'event_list': event_list})
-    except Organization.DoesNotExist:
-        messages.error(request, "Can't find this organization")
+def statistic_dashboard(request):
+    event_per_month = Event.objects.annotate(month=TruncMonth('date')
+                                             ).values('month').annotate(event_count=Count('id')).order_by('month')
 
+    event_per_month_list = [
+        {'month': item['month'].strftime('%Y-%m'),
+         'event_count': item['event_count']
+         } for item in event_per_month
+    ]
+    event_per_month_json = json.dumps(event_per_month_list)
 
-def filter_volunteer_by_skill(request, pk):
-    try:
-        skill = Skill.objects.get(pk=pk)
-        volunteer_list = Volunteer.objects.filter(skills=skill)
-        return render(request, 'nonprofit:volunteer.html', {'volunteer_list': volunteer_list})
-    except Volunteer.DoesNotExist:
-        messages.error(request, "Can't find this skill")
+    skill_counts = Skill.objects.annotate(volunteer_count=Count('volunteer')).all()
+    skill_counts_list = [
+        {'skill': skill.name,
+         'volunteer_count': skill.volunteer_count
+         } for skill in skill_counts
+    ]
+    skill_counts_json = json.dumps(skill_counts_list)
+
+    category_counts = Category.objects.annotate(event_count=Count('event')).all()
+    category_counts_list = [
+        {'category': category.name,
+         'event_count': category.event_count
+         } for category in category_counts
+    ]
+    category_counts_json = json.dumps(category_counts_list)
+    return render(request, 'nonprofit/statistic.html', {'event_per_month': event_per_month_json,
+                                                        'skill_counts': skill_counts_json,
+                                                        'category_counts': category_counts_json})

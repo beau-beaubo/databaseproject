@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Statistics Dashboard</h1>
+    <section>
+        <h2>Monthly Event Count</h2>
+        <p>This chart shows the number of events organized each month.</p>
+        <canvas id="eventPerMonthChart" style="width:100%;max-width:700px"></canvas>
+
+        <script>
+            const eventData = JSON.parse('{{ event_per_month|safe|escapejs }}');
+
+            const eventLabels = eventData.map(item => item.month);
+            const eventDataPoints = eventData.map(item => item.event_count);
+
+            const ctx = document.getElementById('eventPerMonthChart').getContext('2d');
+
+            const eventPerMonthChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: eventLabels,
+                    datasets: [{
+                        label: 'Number of Events per Month',
+                        data: eventDataPoints,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Total Number of Events',
+                                fontColor: '#333',
+                                fontStyle: 'bold'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Month',
+                                fontColor: '#333',
+                                fontStyle: 'bold'
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+    </section>
+    <section>
+        <h2>Skill Count</h2>
+        <p>This chart shows the number of volunteers for each skill.</p>
+        <canvas id="SkillChart" style="width:100%;max-width:700px"></canvas>
+
+        <script>
+            const skillData = JSON.parse('{{ skill_counts|safe|escapejs }}');
+
+            const skillLabels = skillData.map(item => item.skill);
+            const skillDataPoints = skillData.map(item => item.volunteer_count);
+
+            const skillCtx = document.getElementById('SkillChart').getContext('2d');
+
+            const SkillChart = new Chart(skillCtx, {
+                type: "bar",
+                data: {
+                    labels: skillLabels,
+                    datasets: [{
+                        label: 'Number of Volunteers per Skill',
+                        data: skillDataPoints,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Total Number of Volunteers',
+                                fontColor: '#333',
+                                fontStyle: 'bold'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Skill',
+                                fontColor: '#333',
+                                fontStyle: 'bold'
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+    </section>
+    <section>
+        <h2>Category Count</h2>
+        <p>This chart shows the number of events for each category.</p>
+        <canvas id="CategoryChart" style="width:100%;max-width:700px"></canvas>
+
+        <script>
+            const categoryData = JSON.parse('{{ category_counts|safe|escapejs }}');
+
+            const categoryLabels = categoryData.map(item => item.category);
+            const categoryDataPoints = categoryData.map(item => item.event_count);
+
+            const categoryCtx = document.getElementById('CategoryChart').getContext('2d');
+
+            const CategoryChart = new Chart(categoryCtx, {
+                type: "bar",
+                data: {
+                    labels: categoryLabels,
+                    datasets: [{
+                        label: 'Number of Events per Category',
+                        data: categoryDataPoints,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Total Number of Events',
+                                fontColor: '#333',
+                                fontStyle: 'bold'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Category',
+                                fontColor: '#333',
+                                fontStyle: 'bold'
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+    </section>
+</body>
+</html>

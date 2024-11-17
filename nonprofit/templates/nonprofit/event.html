@@ -196,6 +196,12 @@
                     <button>delete</button>
                 </form>
             </td>
+            <td>
+                <form action="{% url 'nonprofit:insight_event' event.id %}" method="POST">
+                    {% csrf_token %}
+                    <button>insight</button>
+                </form>
+            </td>
         </tr>
     {% endfor %}
     </tbody>
