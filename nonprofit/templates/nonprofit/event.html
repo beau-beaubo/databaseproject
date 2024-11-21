@@ -1,39 +1,4 @@
 {% load static %}
-<!--<head>-->
-<!--  <style>-->
-
-<!--    .event-table {-->
-<!--        border-collapse: collapse;-->
-<!--        margin: 25px 0;-->
-<!--        min-width: 400px;-->
-<!--        color: black;-->
-<!--    }-->
-
-<!--    .event-table th, .event-table td {-->
-<!--        border: 3px solid white;-->
-<!--        padding: 12px;-->
-<!--        text-align: center;-->
-<!--    }-->
-
-<!--    .event-table th {-->
-<!--        background-color: #9B7955;-->
-<!--        color: white;-->
-<!--    }-->
-
-<!--    .event-table tr:nth-child(even) {-->
-<!--        background-color: #F4F1ED;-->
-<!--        color: #6D4B28;-->
-<!--    }-->
-
-<!--    .event-table tr:nth-child(odd) {-->
-<!--        background-color: #FAF8F2;-->
-<!--        color: #6D4B28;-->
-<!--    }-->
-
-
-<!--  </style>-->
-<!--</head>-->
-
 
 <head>
     <meta charset="UTF-8">
@@ -294,6 +259,13 @@
                 newOption.text = option.name || option.location;
                 filter.appendChild(newOption);
             });
+
+            if (selectedOption === 'all') {
+                const rows = document.querySelectorAll('.event-table tbody tr');
+                rows.forEach(row => {
+                    row.style.display = '';
+                });
+            }
         });
 
         filter.addEventListener('change', function () {
@@ -306,11 +278,15 @@
 
                 let showRow = true;
 
-                if (filterBy.value === 'organization' && organization !== selectedFilterValue) {
-                    showRow = false;
-                }
-                if (filterBy.value === 'category' && category !== selectedFilterValue) {
-                    showRow = false;
+                if (filterBy.value === 'all') {
+                    showRow = true;
+                } else {
+                    if (filterBy.value === 'organization' && organization !== selectedFilterValue) {
+                        showRow = false;
+                    }
+                    if (filterBy.value === 'category' && category !== selectedFilterValue) {
+                        showRow = false;
+                    }
                 }
 
                 row.style.display = showRow ? '' : 'none';
@@ -318,7 +294,6 @@
         });
     });
 </script>
-
 
 </body>
 </html>
