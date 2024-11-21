@@ -77,45 +77,6 @@
     color: white !important;
 }
 
-.btn-edit {
-    background-color: #89B8AD !important;
-    border-color: #89B8AD !important;
-    color: white !important;
-}
-
-.btn-edit:hover {
-    background-color: #519280 !important;
-    border-color: #519280 !important;
-    color: white !important;
-}
-
-.participation-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    min-width: 400px;
-    color: black;
-}
-
-.participation-table th, .participation-table td {
-    border: 3px solid white;
-    padding: 12px;
-    text-align: center;
-}
-
-.participation-table th {
-     background-color: #9B7955;
-     color: white;
-}
-
-.participation-table tr:nth-child(even) {
-      background-color: #F4F1ED;
-      color: #6D4B28;
-}
-
-.participation-table tr:nth-child(odd) {
-      background-color: #FAF8F2;
-      color: #6D4B28;
-}
 
 /*--Edit Button--*/
 .btn-edit {
@@ -131,7 +92,6 @@
 }
 
 /*--Tables--*/
-
 .event-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -188,30 +148,35 @@
     color: #6D4B28;
 }
 
-.participant-table {
+.participation-table {
     border-collapse: collapse;
     margin: 25px 0;
     min-width: 400px;
     color: black;
 }
 
-.participant-table th, .participant-table td {
+.participation-table th, .participation-table td {
     border: 3px solid white;
     padding: 12px;
     text-align: center;
 }
 
-.participant-table th {
+.participation-table th {
     background-color: #9B7955;
     color: white;
 }
 
-.participant-table tr:nth-child(even) {
+.participation-table tr:nth-child(even) {
     background-color: #F4F1ED;
     color: #6D4B28;
 }
 
-.participant-table tr:nth-child(odd) {
+.participation-table tr:nth-child(odd) {
     background-color: #FAF8F2;
     color: #6D4B28;
+}
+
+/*--Modal--*/
+.modal-body, .modal-body form {
+    text-align: left;
 }
