@@ -1,21 +1,47 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Help</title>
+    <!--=======CSS========-->
+    <link rel="stylesheet" href="{% static './nonprofit/indexstyle.css' %}">
+
 </head>
 <body>
-<form action="{% url 'nonprofit:volunteer_home' %}" method="POST">
-    {% csrf_token %}
-    <button>volunteer</button>
-</form>
-<form action="{% url 'nonprofit:event_home' %}" method="POST">
-    {% csrf_token %}
-    <button>event</button>
-</form>
-<form action="{% url 'nonprofit:participation_home' %}" method="POST">
-    {% csrf_token %}
-    <button>participation</button>
-</form>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">volunteer-help</a>
+        <ul class="nav-link">
+            <li><a href="/nonprofit/statistic/">Statistic</a></li>
+            <li class="active"><a href="/nonprofit/">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Photo Section -->
+        <img src="{% static './nonprofit/images/volunteer-photo.png' %}" alt="Volunteer Image" class="button-photo">
+        <div class="button-container">
+            <!-- Volunteer Form -->
+            <form action="{% url 'nonprofit:volunteer_home' %}" method="POST">
+                {% csrf_token %}
+                <button class="custom-button">volunteer</button>
+            </form>
+
+            <!-- Event Form -->
+            <form action="{% url 'nonprofit:event_home' %}" method="POST">
+                {% csrf_token %}
+                <button class="custom-button">event</button>
+            </form>
+
+            <!--Participate Form-->
+            <form action="{% url 'nonprofit:participation_home' %}" method="POST">
+                {% csrf_token %}
+                <button class="custom-button">participation</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
