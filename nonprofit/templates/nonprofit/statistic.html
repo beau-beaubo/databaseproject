@@ -1,26 +1,51 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Statistic</title>
+    <link rel="stylesheet" href="{% static './nonprofit/statisticnav.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            padding-top : 60px;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #6D4B28;
+        }
+        h2 {
+            text-align: center;
+            color: #6D4B28;
+        }
+        p {
+            text-align: center;
+            color: #6D4B28;
         }
         section {
             margin-bottom: 30px;
         }
+        canvas{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">volunteer-help</a>
+        <ul class="nav-link">
+            <li><a href="/nonprofit/statistic/">Statistic</a></li>
+            <li class="active"><a href="/nonprofit/">Home</a></li>
+        </ul>
+    </nav>
     <h1>Statistics Dashboard</h1>
     <section>
         <h2>Monthly Event Count</h2>
@@ -42,8 +67,7 @@
                     datasets: [{
                         label: 'Number of Events per Month',
                         data: eventDataPoints,
-                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: '#e3dacf',
                         borderWidth: 1
                     }]
                 },
@@ -58,7 +82,7 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Total Number of Events',
-                                fontColor: '#333',
+                                fontColor: '#6D4B28',
                                 fontStyle: 'bold'
                             }
                         }],
@@ -66,7 +90,7 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Month',
-                                fontColor: '#333',
+                                fontColor: '#6D4B28',
                                 fontStyle: 'bold'
                             }
                         }]
@@ -95,8 +119,7 @@
                     datasets: [{
                         label: 'Number of Volunteers per Skill',
                         data: skillDataPoints,
-                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: '#e3dacf',
                         borderWidth: 1
                     }]
                 },
@@ -111,7 +134,7 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Total Number of Volunteers',
-                                fontColor: '#333',
+                                fontColor: '#6D4B28',
                                 fontStyle: 'bold'
                             }
                         }],
@@ -119,7 +142,7 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Skill',
-                                fontColor: '#333',
+                                fontColor: '#6D4B28',
                                 fontStyle: 'bold'
                             }
                         }]
@@ -148,8 +171,7 @@
                     datasets: [{
                         label: 'Number of Events per Category',
                         data: categoryDataPoints,
-                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: '#e3dacf',
                         borderWidth: 1
                     }]
                 },
@@ -164,7 +186,7 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Total Number of Events',
-                                fontColor: '#333',
+                                fontColor: '#6D4B28',
                                 fontStyle: 'bold'
                             }
                         }],
@@ -172,7 +194,7 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Category',
-                                fontColor: '#333',
+                                fontColor: '#6D4B28',
                                 fontStyle: 'bold'
                             }
                         }]
