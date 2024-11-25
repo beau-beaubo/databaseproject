@@ -11,8 +11,17 @@
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #54380C;
         }
+
+        h2 {
+            color: #7A4F0E;
+        }
+
+        p {
+            color: #7A4F0E;
+        }
+
         section {
             margin-bottom: 30px;
         }
@@ -30,10 +39,28 @@
             background-color: #f4f4f4;
         }
         caption {
+            color: #9E4D10;
             font-size: 1.2em;
             margin-bottom: 10px;
             font-weight: bold;
             text-align: left;
+        }
+
+        .insight-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            min-width: 400px;
+            color: black;
+        }
+
+        .insight-table th, .volunteer-table td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        .insight-table th {
+            background-color: #9B7955;
+            color: white;
         }
     </style>
 </head>
@@ -44,7 +71,7 @@
 <section>
     <h2>Volunteers with Maximum Hours Contributed</h2>
     <p>The following table lists volunteers who contributed the most hours during the event:</p>
-    <table>
+    <table class="insight-table">
         <caption>Top Contributors</caption>
         <thead>
             <tr>
@@ -66,7 +93,7 @@
 <section>
     <h2>Volunteers with Minimum Hours Contributed</h2>
     <p>The following table lists volunteers who contributed the least hours during the event:</p>
-    <table>
+    <table class="insight-table">
         <caption>Lowest Contributors</caption>
         <thead>
             <tr>
@@ -88,7 +115,7 @@
 <section>
     <h2>Average Hours Contributed</h2>
     <p>The following table shows the average hours contributed by all volunteers:</p>
-    <table>
+    <table class="insight-table">
         <caption>Average Contribution</caption>
         <thead>
             <tr>
