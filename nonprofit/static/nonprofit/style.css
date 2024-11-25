@@ -78,7 +78,7 @@
 }
 
 
-/*--Edit Button--*/
+/*--Button--*/
 .btn-edit {
     background-color: #89B8AD !important;
     border-color: #89B8AD !important;
@@ -88,6 +88,18 @@
 .btn-edit:hover {
     background-color: #519280 !important;
     border-color: #519280 !important;
+    color: white !important;
+}
+
+.btn-insight {
+    background-color: #93AACE !important;
+    border-color: #93AACE !important;
+    color: white !important;
+}
+
+.btn-insight:hover {
+    background-color: #7B99C6 !important;
+    border-color: #7B99C6 !important;
     color: white !important;
 }
 
