@@ -122,6 +122,10 @@
                             </div>
                         </div>
                     </div>
+                    <form action="{% url 'nonprofit:insight_event' event.id %}" method="POST">
+                        {% csrf_token %}
+                    <button class="btn btn-insight">Insight</button>
+                    </form>
                     <form action="{% url 'nonprofit:delete_event' event.id %}" method="POST" class="d-inline-block">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Delete</button>
