@@ -24,11 +24,31 @@
     body {
         padding-top: 60px; /* Default Bootstrap navbar height */
     }
+    .messages {
+        margin-top: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .success {
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
 </style>
+{% if messages %}
+    <ul class="messages">
+        {% for msg in messages %}
+          <li class="{{msg.tags}}"><em>{{ msg }}</em></li>
+        {% endfor %}
+    </ul>
+{% endif %}
 <div class="container mt-4">
     <h2 style="color: #6D4B28">Participation</h2>
     <!-- Button trigger modal -->
-    <button class="btn btn-insert-participation" style="margin: 10 !important" data-bs-toggle="modal" data-bs-target="#InsertParticipationModal"> InsertParticipation </button>
+    <button class="btn btn-insert-participation" style="margin: 10 !important" data-bs-toggle="modal" data-bs-target="#InsertParticipationModal"> Insert Participation </button>
     <!-- Participation Table -->
     <table class="participation-table">
         <thead>

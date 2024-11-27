@@ -79,7 +79,7 @@ def insert_volunteer(request):
                 skill = Skill.objects.get(id=skill_id)
                 VolunteerSkill.objects.create(volunteer=volunteer, skill=skill)
 
-            messages.success(request, "Volunteer and skills successfully added!")
+            messages.success(request, f"Volunteer: {volunteer} and skills: {skill} successfully added!")
             return redirect('nonprofit:volunteer_home')
     else:
         volunteer_form = VolunteerForm()
@@ -102,8 +102,8 @@ def insert_skill(request):
     if request.method == 'POST':
         skill_form = SkillForm(request.POST)
         if skill_form.is_valid():
-            skill_form.save()
-            messages.success(request, "Successfully insert skill!")
+            skill = skill_form.save()
+            messages.success(request, f"Successfully insert skill {skill.name}")
             return redirect('nonprofit:volunteer_home')
     else:
         skill_form = SkillForm()
@@ -114,8 +114,8 @@ def insert_category(request):
     if request.method == 'POST':
         category_form = CategoryForm(request.POST)
         if category_form.is_valid():
-            category_form.save()
-            messages.success(request, "Successfully insert category!")
+            category = category_form.save()
+            messages.success(request, f"Successfully insert category: {category.name}")
             return redirect('nonprofit:event_home')
     else:
         category_form = SkillForm()
@@ -126,8 +126,8 @@ def insert_organization(request):
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST)
         if organization_form.is_valid():
-            organization_form.save()
-            messages.success(request, "Successfully insert organization!")
+            organization = organization_form.save()
+            messages.success(request, f"Successfully insert organization: {organization.name}")
             return redirect('nonprofit:event_home')
     else:
         organization_form = OrganizationForm()
@@ -154,8 +154,8 @@ def insert_event(request):
     if request.method == 'POST':
         event_form = EventForm(request.POST)
         if event_form.is_valid():
-            event_form.save()
-            messages.success(request, "Successfully insert event!")
+            event = event_form.save()
+            messages.success(request, f"Successfully insert event: {event.name}")
             return redirect('nonprofit:event_home')
     else:
         event_form = EventForm()
@@ -187,8 +187,9 @@ def insert_participation(request):
     if request.method == 'POST':
         participation_form = ParticipationForm(request.POST)
         if participation_form.is_valid():
-            participation_form.save()
-            messages.success(request, "Successfully insert participation!")
+            participation = participation_form.save()
+            messages.success(request,
+                             f"Successfully insert {participation.volunteer.name} to participate {participation.event.name}")
             return redirect('nonprofit:participation_home')
     else:
         participation_form = ParticipationForm()
