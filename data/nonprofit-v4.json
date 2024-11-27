@@ -1,0 +1,2565 @@
+[
+{
+  "model": "nonprofit.category",
+  "pk": 1,
+  "fields": {
+    "name": "Education"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 2,
+  "fields": {
+    "name": "Animal Health"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 3,
+  "fields": {
+    "name": "Donation"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 4,
+  "fields": {
+    "name": "Environment"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 5,
+  "fields": {
+    "name": "Healthcare"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 7,
+  "fields": {
+    "name": "Cultural & Arts"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 8,
+  "fields": {
+    "name": "Social Causes"
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 1,
+  "fields": {
+    "name": "Bright Minds Foundation",
+    "description": "Empowering education by supporting underprivileged schools with resources, scholarships, and opportunities to shape a brighter future for children."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 2,
+  "fields": {
+    "name": "Paws of Hope",
+    "description": "Dedicated to rescuing, rehabilitating, and rehoming homeless animals, Paws of Hope strives to create a safe and loving world for animals in need."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 3,
+  "fields": {
+    "name": "Hope for the Abandoned",
+    "description": "This charity works to provide shelter, care, and a better future for children who have been abandoned by their parents, ensuring they have the resources to thrive."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 4,
+  "fields": {
+    "name": "Earth Guardian Initiative",
+    "description": "Protecting our planet through tree planting, waste reduction, and community education, aiming for a cleaner, greener future."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 5,
+  "fields": {
+    "name": "Golden Years Fund",
+    "description": "Supporting elderly individuals by helping them cover medical expenses and ensuring they lead comfortable and dignified lives."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 6,
+  "fields": {
+    "name": "Blue Horizon Project",
+    "description": "Protecting marine ecosystems through ocean clean-ups, awareness campaigns, and conservation efforts for a thriving underwater world."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 7,
+  "fields": {
+    "name": "Coral Life Foundation",
+    "description": "Revitalizing coral reefs through restoration projects and sustainable practices, ensuring vibrant marine biodiversity for future generations."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 10,
+  "fields": {
+    "name": "Harmony & Hope Initiative",
+    "description": "a non-profit that uses art and culture to support social causes, organizing events to raise funds and empower communities."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 11,
+  "fields": {
+    "name": "Rainbow Voices Foundation",
+    "description": "advocates for LGBTQ+ rights, promoting equality and inclusion through events like Pride for All to empower and support the community."
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 1,
+  "fields": {
+    "name": "Book and Backpack Drive",
+    "description": "Collect and distribute school supplies to underprivileged schools.",
+    "date": "2023-12-31T23:00:00Z",
+    "location": "Bangkok",
+    "category": 3,
+    "organization": 1
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 2,
+  "fields": {
+    "name": "Charity Dog Walk",
+    "description": "Host a fun walk/run with pets to raise funds for animal rescue.",
+    "date": "2024-01-11T23:00:00Z",
+    "location": "Bangkok",
+    "category": 3,
+    "organization": 2
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 3,
+  "fields": {
+    "name": "Health Check Drive for Seniors",
+    "description": "Offer free health screenings for elderly individuals.",
+    "date": "2024-02-14T23:00:00Z",
+    "location": "Bangkok",
+    "category": 5,
+    "organization": 5
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 4,
+  "fields": {
+    "name": "Pet Wellness Day",
+    "description": "Offer free or low-cost veterinary check-ups for community pets.",
+    "date": "2024-02-28T23:00:00Z",
+    "location": "Bangkok",
+    "category": 2,
+    "organization": 2
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 5,
+  "fields": {
+    "name": "Toy and Clothes Drive",
+    "description": "Collect donations to provide children with essentials and toys.",
+    "date": "2024-03-19T23:00:00Z",
+    "location": "Bangkok",
+    "category": 3,
+    "organization": 3
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 6,
+  "fields": {
+    "name": "Clean the Green",
+    "description": "A community clean-up event focusing on parks and green spaces.",
+    "date": "2024-03-30T23:00:00Z",
+    "location": "Bangkok",
+    "category": 4,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 7,
+  "fields": {
+    "name": "Coral Care Workshop",
+    "description": "Teach the public about coral reef conservation and encourage donations for restoration projects.",
+    "date": "2024-04-16T23:00:00Z",
+    "location": "Bangkok",
+    "category": 4,
+    "organization": 7
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 8,
+  "fields": {
+    "name": "Sponsor-a-Child Program Launch",
+    "description": "Organize an event to introduce a sponsorship program for supporting a child's education and wellbeing.",
+    "date": "2024-06-07T05:00:00Z",
+    "location": "Bangkok",
+    "category": 3,
+    "organization": 3
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 9,
+  "fields": {
+    "name": "Scholarship Gala",
+    "description": "Host a fundraising event to raise money for student scholarships.",
+    "date": "2024-07-24T05:00:00Z",
+    "location": "Bangkok",
+    "category": 1,
+    "organization": 1
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 10,
+  "fields": {
+    "name": "Teach-a-thon",
+    "description": "Partner with volunteer teachers and organize workshops or tutoring sessions for students.",
+    "date": "2024-07-19T05:00:00Z",
+    "location": "Bangkok",
+    "category": 1,
+    "organization": 1
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 11,
+  "fields": {
+    "name": "Eco Fair",
+    "description": "Promote sustainable products and provide workshops on recycling and reducing waste.",
+    "date": "2024-08-04T23:00:00Z",
+    "location": "Bangkok",
+    "category": 4,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 12,
+  "fields": {
+    "name": "Ocean Awareness Festival",
+    "description": "Organize a public event featuring exhibits, films, and talks on marine conservation.",
+    "date": "2024-09-18T23:00:00Z",
+    "location": "Bangkok",
+    "category": 4,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 13,
+  "fields": {
+    "name": "Beach Clean-Up Day",
+    "description": "Mobilize volunteers to clean up plastic and other waste from beaches.",
+    "date": "2024-09-17T23:00:00Z",
+    "location": "Bangkok",
+    "category": 4,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 14,
+  "fields": {
+    "name": "Adopt-a-thon",
+    "description": "Organize an event where people can meet animals in need of a home.",
+    "date": "2024-10-03T05:00:00Z",
+    "location": "Bangkok",
+    "category": 2,
+    "organization": 2
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 15,
+  "fields": {
+    "name": "Inclusive Job Fair",
+    "description": "Partner with companies to provide job opportunities for people with disabilities.",
+    "date": "2024-11-10T23:00:00Z",
+    "location": "Bangkok",
+    "category": 1,
+    "organization": 1
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 16,
+  "fields": {
+    "name": "Paint the school",
+    "description": "Painting a school in countryside",
+    "date": "2024-12-25T11:22:00Z",
+    "location": "Chiang rai",
+    "category": 1,
+    "organization": 3
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 19,
+  "fields": {
+    "name": "Art Heals Hearts",
+    "description": "Craft fairs featuring local artisans",
+    "date": "2024-04-16T11:00:00Z",
+    "location": "Bangkok",
+    "category": 7,
+    "organization": 10
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 20,
+  "fields": {
+    "name": "The Giving Gallery",
+    "description": "An art exhibition where every piece tells a story of giving. Artists donate their works, and the event’s proceeds fund charitable initiatives aimed at improving lives and fostering community care.",
+    "date": "2024-02-06T11:00:00Z",
+    "location": "Bangkok",
+    "category": 7,
+    "organization": 10
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 21,
+  "fields": {
+    "name": "Colors of Kindness",
+    "description": "A celebration of color, creativity, and compassion. This art show features works that promote kindness, and all proceeds go to supporting community-building and outreach programs.",
+    "date": "2024-09-10T11:00:00Z",
+    "location": "Bangkok",
+    "category": 7,
+    "organization": 10
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 22,
+  "fields": {
+    "name": "Voices of Change",
+    "description": "A talent show featuring powerful performances that highlight important social issues. This event gives voice to the marginalized and raises funds to support impactful social change initiatives.",
+    "date": "2024-10-29T11:00:00Z",
+    "location": "Bangkok",
+    "category": 7,
+    "organization": 10
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 23,
+  "fields": {
+    "name": "Handmade with Heart",
+    "description": "A craft fair showcasing unique handmade creations by local artisans, with every purchase supporting community-based projects and charitable causes. The event celebrates creativity, craftsmanship, and giving.",
+    "date": "2024-11-06T23:00:00Z",
+    "location": "Bangkok",
+    "category": 7,
+    "organization": 10
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 24,
+  "fields": {
+    "name": "Pride for All",
+    "description": "a vibrant celebration of LGBTQ+ equality, fostering acceptance, awareness, and unity through parades, performances, and workshops. It’s a space for all to embrace love and diversity.",
+    "date": "2024-07-23T23:00:00Z",
+    "location": "Bangkok",
+    "category": 8,
+    "organization": 11
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 1,
+  "fields": {
+    "name": "Teaching"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 2,
+  "fields": {
+    "name": "Public speaking"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 3,
+  "fields": {
+    "name": "Communication"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Animal handling"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 5,
+  "fields": {
+    "name": "Creativity"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 6,
+  "fields": {
+    "name": "Gardening"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 7,
+  "fields": {
+    "name": "healthcare experience"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 8,
+  "fields": {
+    "name": "Teamwork"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 9,
+  "fields": {
+    "name": "Marine biology"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 10,
+  "fields": {
+    "name": "painting"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 1,
+  "fields": {
+    "name": "Emma White",
+    "email": "emma.white@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 2,
+  "fields": {
+    "name": "Liam Johnson",
+    "email": "liam.johnson@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 3,
+  "fields": {
+    "name": "Olivia Carter",
+    "email": "olivia.carter@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 4,
+  "fields": {
+    "name": "Noah Davis",
+    "email": "noah.davis@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 5,
+  "fields": {
+    "name": "Ava Martinez",
+    "email": "ava.martinez@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 6,
+  "fields": {
+    "name": "Ethan Taylor",
+    "email": "ethan.taylor@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 7,
+  "fields": {
+    "name": "Sophia Brown",
+    "email": "sophia.brown@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 8,
+  "fields": {
+    "name": "Mason Lee",
+    "email": "mason.lee@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 9,
+  "fields": {
+    "name": "Isabella Anderson",
+    "email": "isabella.anderson@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 10,
+  "fields": {
+    "name": "James Harris",
+    "email": "james.harris@example.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 11,
+  "fields": {
+    "name": "Michael Wong",
+    "email": "michaelw.@gmail.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 12,
+  "fields": {
+    "name": "Jasmine Lee",
+    "email": "jasminelee@gmail.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 13,
+  "fields": {
+    "name": "Jason Carpenter",
+    "email": "jasoncar@gmail.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 14,
+  "fields": {
+    "name": "John Walker",
+    "email": "johnwalker@gmail.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 15,
+  "fields": {
+    "name": "Glinda Wick",
+    "email": "glindawick@gmail.com"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 16,
+  "fields": {
+    "name": "Jimmy Stark",
+    "email": "jimmystark"
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 8,
+  "fields": {
+    "volunteer": 3,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 9,
+  "fields": {
+    "volunteer": 3,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 10,
+  "fields": {
+    "volunteer": 4,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 11,
+  "fields": {
+    "volunteer": 5,
+    "skill": 3
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 12,
+  "fields": {
+    "volunteer": 5,
+    "skill": 5
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 13,
+  "fields": {
+    "volunteer": 6,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 14,
+  "fields": {
+    "volunteer": 6,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 15,
+  "fields": {
+    "volunteer": 7,
+    "skill": 4
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 16,
+  "fields": {
+    "volunteer": 7,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 17,
+  "fields": {
+    "volunteer": 8,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 18,
+  "fields": {
+    "volunteer": 8,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 19,
+  "fields": {
+    "volunteer": 8,
+    "skill": 3
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 20,
+  "fields": {
+    "volunteer": 8,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 21,
+  "fields": {
+    "volunteer": 9,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 22,
+  "fields": {
+    "volunteer": 9,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 23,
+  "fields": {
+    "volunteer": 9,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 24,
+  "fields": {
+    "volunteer": 10,
+    "skill": 4
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 25,
+  "fields": {
+    "volunteer": 10,
+    "skill": 5
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 26,
+  "fields": {
+    "volunteer": 10,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 27,
+  "fields": {
+    "volunteer": 11,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 28,
+  "fields": {
+    "volunteer": 11,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 29,
+  "fields": {
+    "volunteer": 12,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 30,
+  "fields": {
+    "volunteer": 12,
+    "skill": 4
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 31,
+  "fields": {
+    "volunteer": 12,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 32,
+  "fields": {
+    "volunteer": 13,
+    "skill": 3
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 33,
+  "fields": {
+    "volunteer": 13,
+    "skill": 5
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 34,
+  "fields": {
+    "volunteer": 13,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 35,
+  "fields": {
+    "volunteer": 13,
+    "skill": 10
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 36,
+  "fields": {
+    "volunteer": 14,
+    "skill": 4
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 37,
+  "fields": {
+    "volunteer": 14,
+    "skill": 6
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 38,
+  "fields": {
+    "volunteer": 14,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 39,
+  "fields": {
+    "volunteer": 15,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 40,
+  "fields": {
+    "volunteer": 15,
+    "skill": 3
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 41,
+  "fields": {
+    "volunteer": 15,
+    "skill": 5
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 42,
+  "fields": {
+    "volunteer": 15,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 43,
+  "fields": {
+    "volunteer": 16,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 44,
+  "fields": {
+    "volunteer": 16,
+    "skill": 6
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 45,
+  "fields": {
+    "volunteer": 16,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 46,
+  "fields": {
+    "volunteer": 16,
+    "skill": 10
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 78,
+  "fields": {
+    "volunteer": 2,
+    "skill": 4
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 113,
+  "fields": {
+    "volunteer": 1,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 114,
+  "fields": {
+    "volunteer": 1,
+    "skill": 3
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 115,
+  "fields": {
+    "volunteer": 1,
+    "skill": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 1,
+  "fields": {
+    "event": 10,
+    "volunteer": 1,
+    "hours_contributed": 8
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 2,
+  "fields": {
+    "event": 4,
+    "volunteer": 2,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 3,
+  "fields": {
+    "event": 12,
+    "volunteer": 3,
+    "hours_contributed": 5
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 4,
+  "fields": {
+    "event": 12,
+    "volunteer": 4,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 5,
+  "fields": {
+    "event": 8,
+    "volunteer": 5,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 6,
+  "fields": {
+    "event": 3,
+    "volunteer": 6,
+    "hours_contributed": 8
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 7,
+  "fields": {
+    "event": 2,
+    "volunteer": 7,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 8,
+  "fields": {
+    "event": 10,
+    "volunteer": 8,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 9,
+  "fields": {
+    "event": 3,
+    "volunteer": 9,
+    "hours_contributed": 7
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 10,
+  "fields": {
+    "event": 7,
+    "volunteer": 10,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 11,
+  "fields": {
+    "event": 10,
+    "volunteer": 11,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 12,
+  "fields": {
+    "event": 4,
+    "volunteer": 12,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 13,
+  "fields": {
+    "event": 16,
+    "volunteer": 13,
+    "hours_contributed": 6
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 14,
+  "fields": {
+    "event": 12,
+    "volunteer": 14,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 15,
+  "fields": {
+    "event": 7,
+    "volunteer": 15,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 16,
+  "fields": {
+    "event": 4,
+    "volunteer": 16,
+    "hours_contributed": 5
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 19,
+  "fields": {
+    "event": 1,
+    "volunteer": 3,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 21,
+  "fields": {
+    "event": 10,
+    "volunteer": 13,
+    "hours_contributed": 8
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 22,
+  "fields": {
+    "event": 1,
+    "volunteer": 1,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 23,
+  "fields": {
+    "event": 1,
+    "volunteer": 6,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 24,
+  "fields": {
+    "event": 1,
+    "volunteer": 9,
+    "hours_contributed": 1
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 25,
+  "fields": {
+    "event": 24,
+    "volunteer": 8,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 26,
+  "fields": {
+    "event": 24,
+    "volunteer": 15,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 27,
+  "fields": {
+    "event": 24,
+    "volunteer": 14,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 28,
+  "fields": {
+    "event": 4,
+    "volunteer": 4,
+    "hours_contributed": 5
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 29,
+  "fields": {
+    "event": 4,
+    "volunteer": 3,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 30,
+  "fields": {
+    "event": 4,
+    "volunteer": 10,
+    "hours_contributed": 1
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 31,
+  "fields": {
+    "event": 8,
+    "volunteer": 2,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 32,
+  "fields": {
+    "event": 7,
+    "volunteer": 12,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 33,
+  "fields": {
+    "event": 14,
+    "volunteer": 16,
+    "hours_contributed": 1
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 34,
+  "fields": {
+    "event": 2,
+    "volunteer": 9,
+    "hours_contributed": 5
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 35,
+  "fields": {
+    "event": 2,
+    "volunteer": 2,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 36,
+  "fields": {
+    "event": 2,
+    "volunteer": 8,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 37,
+  "fields": {
+    "event": 1,
+    "volunteer": 14,
+    "hours_contributed": 1
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 38,
+  "fields": {
+    "event": 6,
+    "volunteer": 5,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-11-17T14:08:23.126Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "Bright Minds Foundation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-11-17T14:08:44.702Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "Paws of Hope",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-11-17T14:09:03.232Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Hope for the Abandoned",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-11-17T14:09:20.118Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "Earth Guardian Initiative",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-11-17T14:09:39.408Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "Golden Years Fund",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-11-17T14:10:14.169Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "Blue Horizon Project",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-11-17T14:10:35.800Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "Coral Life Foundation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-11-17T14:12:51.880Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "Education",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-11-17T14:13:01.148Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "Animal Health",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-11-17T14:13:12.731Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Donation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-11-17T14:13:26.290Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "Environment",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-11-17T14:13:39.575Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "5",
+    "object_repr": "Healthcare",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-11-17T14:14:21.161Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Book and Backpack Drive",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-11-17T14:15:26.066Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Charity Dog Walk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-11-17T14:16:27.685Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "Health Check Drive for Seniors",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-11-17T14:17:16.084Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Pet Wellness Day",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-11-17T14:18:29.338Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Toy and Clothes Drive",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-11-17T14:19:10.988Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Clean the Green",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-11-17T14:19:53.925Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "Coral Care Workshop",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-11-17T14:20:54.931Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "Sponsor-a-Child Program Launch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-11-17T14:21:32.294Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "9",
+    "object_repr": "Scholarship Gala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-11-17T14:22:10.422Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "Teach-a-thon",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-11-17T14:22:54.171Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "Eco Fair",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-11-17T14:23:35.679Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "12",
+    "object_repr": "Ocean Awareness Festival",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-11-17T14:24:12.113Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Beach Clean-Up Day",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-11-17T14:25:45.675Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "Adopt-a-thon",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-11-17T14:26:38.197Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "Inclusive Job Fair",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-11-17T14:27:44.411Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Teaching",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-11-27T14:43:44.122Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "18",
+    "object_repr": "Big",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-11-27T14:43:44.123Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "17",
+    "object_repr": "Housing",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-11-27T14:43:53.055Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "9",
+    "object_repr": "Charity.Co",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-11-27T14:43:53.055Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "8",
+    "object_repr": "Mim",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "17",
+    "object_repr": "Cleaning",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "16",
+    "object_repr": "A",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "15",
+    "object_repr": "A",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "14",
+    "object_repr": "ก",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "13",
+    "object_repr": "ฟ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "12",
+    "object_repr": "hi1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-11-27T14:44:08.882Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "11",
+    "object_repr": "hi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-11-27T14:44:23.033Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "25",
+    "object_repr": "Sally",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-11-27T14:44:23.033Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "24",
+    "object_repr": "Courtney",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-11-27T14:44:23.033Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "20",
+    "object_repr": "Cartoon",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-11-27T14:46:10.348Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "6",
+    "object_repr": "Charity",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-11-27T14:46:26.114Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "7",
+    "object_repr": "Cultural & Arts",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-11-27T14:46:41.788Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "8",
+    "object_repr": "Social Causes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-11-27T14:48:10.929Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "Art Heals Hearts",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-11-27T14:49:47.372Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "10",
+    "object_repr": "Harmony & Hope Initiative",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-11-27T14:49:55.183Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "Art Heals Hearts",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Organization\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-11-27T14:51:21.566Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "The Giving Gallery",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-11-27T14:51:50.551Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "21",
+    "object_repr": "Colors of Kindness",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-11-27T14:52:22.783Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "Voices of Change",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-11-27T14:52:58.741Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "Handmade with Heart",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-11-27T14:54:47.397Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "Pride for All",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-11-27T14:55:40.253Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "11",
+    "object_repr": "Rainbow Voices Foundation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-11-27T14:55:45.469Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "Pride for All",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Organization\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 1,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 1,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 1,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 1,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add organization",
+    "content_type": 2,
+    "codename": "add_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change organization",
+    "content_type": 2,
+    "codename": "change_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete organization",
+    "content_type": 2,
+    "codename": "delete_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view organization",
+    "content_type": 2,
+    "codename": "view_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add skill",
+    "content_type": 3,
+    "codename": "add_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change skill",
+    "content_type": 3,
+    "codename": "change_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete skill",
+    "content_type": 3,
+    "codename": "delete_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view skill",
+    "content_type": 3,
+    "codename": "view_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add event",
+    "content_type": 4,
+    "codename": "add_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change event",
+    "content_type": 4,
+    "codename": "change_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete event",
+    "content_type": 4,
+    "codename": "delete_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view event",
+    "content_type": 4,
+    "codename": "view_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add volunteer",
+    "content_type": 5,
+    "codename": "add_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change volunteer",
+    "content_type": 5,
+    "codename": "change_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete volunteer",
+    "content_type": 5,
+    "codename": "delete_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view volunteer",
+    "content_type": 5,
+    "codename": "view_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add participation",
+    "content_type": 6,
+    "codename": "add_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change participation",
+    "content_type": 6,
+    "codename": "change_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete participation",
+    "content_type": 6,
+    "codename": "delete_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view participation",
+    "content_type": 6,
+    "codename": "view_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add volunteer skill",
+    "content_type": 7,
+    "codename": "add_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change volunteer skill",
+    "content_type": 7,
+    "codename": "change_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete volunteer skill",
+    "content_type": 7,
+    "codename": "delete_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view volunteer skill",
+    "content_type": 7,
+    "codename": "view_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 8,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 8,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 8,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 8,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 9,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 9,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 9,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 9,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 10,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 10,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 10,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 10,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 11,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 11,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 11,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 11,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 12,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 12,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 12,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 12,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 13,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 13,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 13,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 13,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$dIe3TpVTWm6Kvo2Pw5vWwF$cTr/CR1GiwY71tJM878mKIvFmUanhW3G9lKjyyG+QXY=",
+    "last_login": "2024-11-27T14:43:29.529Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@demo.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-11-17T14:04:20.862Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "organization"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "skill"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "event"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "volunteer"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "participation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "volunteerskill"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "34n2l1tay93yrxmah87wb2mmguq90g58",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8BtCl-34DAYaRqoGktCvjv2uTLnR7zzn3xULc1hq2UZYwI7swyU6_W4r5UdoO8B7brfPc27rMie8KP-jgU8fyvB7u30GNo35rJ6UA5TJYb1V2CEDWCwkGVZLCQDZRREpFE1D2SXhAp4mc01qgOSv2_gC28TcP:1tCftq:W5TlEuDTjSJIuFc-T40aJKfS4bqT1WLlMN6S4Wcd4ZM",
+    "expire_date": "2024-12-01T14:05:14.273Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lsafab6au3ge2oyiw3td29ntb0bhqp00",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8BtCl-34DAYaRqoGktCvjv2uTLnR7zzn3xULc1hq2UZYwI7swyU6_W4r5UdoO8B7brfPc27rMie8KP-jgU8fyvB7u30GNo35rJ6UA5TJYb1V2CEDWCwkGVZLCQDZRREpFE1D2SXhAp4mc01qgOSv2_gC28TcP:1tGJGL:3SD7OBDL-19wJXBpdVZ6toSqhtKvloIqc3aSSsDO2e0",
+    "expire_date": "2024-12-11T14:43:29.530Z"
+  }
+}
+]
