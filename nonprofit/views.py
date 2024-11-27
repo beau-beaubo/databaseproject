@@ -79,7 +79,7 @@ def insert_volunteer(request):
                 skill = Skill.objects.get(id=skill_id)
                 VolunteerSkill.objects.create(volunteer=volunteer, skill=skill)
 
-            messages.success(request, f"Volunteer: {volunteer} and skills: {skill} successfully added!")
+            messages.success(request, f"Volunteer: {volunteer} successfully added!")
             return redirect('nonprofit:volunteer_home')
     else:
         volunteer_form = VolunteerForm()

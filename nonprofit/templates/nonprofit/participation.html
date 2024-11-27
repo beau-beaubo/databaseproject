@@ -80,13 +80,16 @@
                                         {% csrf_token %}
                                         <div class="mb-3">
                                             <label for="participationVolunteer" class="form-label">Volunteer</label>
-                                            <select class="form-control" name="volunteer" id="participationVolunteer" required disabled>
+                                            <select class="form-control" name="volunteer" id="participationVolunteer" disabled>
                                                 <option value="" disabled>Select a volunteer</option>
                                                 {% for volunteer in volunteer_list %}
-                                                <option value="{{ volunteer.id }}" {% if volunteer.id == participation.volunteer.id %}selected{% endif %}>{{ volunteer.name }}</option>
+                                                <option value="{{ volunteer.id }}" {% if volunteer.id == participation.volunteer.id %}selected{% endif %}>
+                                                    {{ volunteer.name }}
+                                                </option>
                                                 {% endfor %}
                                             </select>
                                         </div>
+                                        <input type="hidden" name="volunteer" value="{{ participation.volunteer.id }}">
                                         <div class="mb-3">
                                             <label for="participationEvent" class="form-label">Event</label>
                                             <select class="form-control" name="event" id="participationEvent" required>
