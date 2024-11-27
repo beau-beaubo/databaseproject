@@ -41,18 +41,20 @@ def update_volunteer_details(request, pk):
             skill_form = VolunteerSkillForm(request.POST)
             skill_ids = request.POST.getlist('skills')
 
-            if volunteer_form.is_valid():
+            if volunteer_form.is_valid() and skill_form.is_valid():
                 volunteer_form.save()
 
                 for skill_id in skill_ids:
                     skill = Skill.objects.get(id=skill_id)
                     VolunteerSkill.objects.create(volunteer=volunteer, skill=skill)
 
-                messages.success(request, "Successfully updated volunteer details!")
+                    messages.success(request, "Successfully updated volunteer details!")
+                    return redirect('nonprofit:volunteer_home')
+            else:
+                messages.error(request, "Please fill all the blank")
                 return redirect('nonprofit:volunteer_home')
 
         else:
-            # Initialize the volunteer form with the volunteer data
             volunteer_form = VolunteerForm(instance=volunteer)
             skill_form = VolunteerSkillForm()
 
@@ -79,7 +81,10 @@ def insert_volunteer(request):
                 skill = Skill.objects.get(id=skill_id)
                 VolunteerSkill.objects.create(volunteer=volunteer, skill=skill)
 
-            messages.success(request, f"Volunteer: {volunteer} successfully added!")
+                messages.success(request, f"Volunteer: {volunteer} successfully added!")
+                return redirect('nonprofit:volunteer_home')
+        else:
+            messages.error(request, "Please fill all the blank")
             return redirect('nonprofit:volunteer_home')
     else:
         volunteer_form = VolunteerForm()
