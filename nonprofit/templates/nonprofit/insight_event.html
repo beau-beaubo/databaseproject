@@ -67,7 +67,7 @@
 <body>
 
 <h1>Event Contribution Analysis</h1>
-
+{% if max_hours_list and min_hours_list and avg_hours %}
 <section>
     <h2>Volunteers with Maximum Hours Contributed</h2>
     <p>The following table lists volunteers who contributed the most hours during the event:</p>
@@ -129,6 +129,8 @@
         </tbody>
     </table>
 </section>
-
+{% else %}
+<label>No volunteers are available for this event.</label>
+{% endif %}
 </body>
 </html>
