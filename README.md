@@ -36,7 +36,7 @@ python3 manage.py migrate
 
 6. Install data from data fixtures
 ```commandline
-python3 manage.py loaddata data/nonprofit-v4.json
+python3 manage.py loaddata data/nonprofit-v5.json
 ```
 
 ## Running the Application
