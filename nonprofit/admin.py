@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (Category, Event, Volunteer, Organization, Skill,
-                     Participation, VolunteerSkill)
+                     Participation, VolunteerSkill, DonateMoney)
 
 
 admin.site.register(Category)
@@ -10,3 +10,4 @@ admin.site.register(Organization)
 admin.site.register(Skill)
 admin.site.register(Participation)
 admin.site.register(VolunteerSkill)
+admin.site.register(DonateMoney)

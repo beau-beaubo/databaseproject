@@ -41,6 +41,10 @@
                 {% csrf_token %}
                 <button class="custom-button">participation</button>
             </form>
+            <form action="{% url 'nonprofit:organization_home' %}" method="POST">
+                {% csrf_token %}
+                <button class="custom-button">organization</button>
+            </form>
         </div>
     </div>
 </body>
