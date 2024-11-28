@@ -22,4 +22,7 @@ urlpatterns = [
     path('<int:pk>/delete/participation/', views.delete_participation, name='delete_participation'),
     path('<int:pk>/insight/event/', views.insight_event, name='insight_event'),
     path('statistic/', views.statistic_dashboard, name='statistic'),
+    path("organization/", views.organization_home, name="organization_home"),
+    path("<int:pk>/donation/", views.donation_home, name="donation_home"),
+    path("<int:pk>/donation/money/", views.donate_money, name="donate_money"),
 ]

@@ -1,5 +1,6 @@
 from django.db import models
 from django import forms
+from django.utils.timezone import now
 
 
 class Category(models.Model):
@@ -27,6 +28,22 @@ class Event(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class DonateMoney(models.Model):
+    amount = models.IntegerField(default=0)
+    date = models.DateTimeField(default=now, null=True, blank=True)
+    organization = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.amount)
+
+
+class DonateMoneyForm(forms.ModelForm):
+    class Meta:
+        model = DonateMoney
+        fields = "__all__"
 
 
 class Skill(models.Model):
