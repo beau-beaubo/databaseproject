@@ -1,0 +1,3602 @@
+[
+{
+  "model": "nonprofit.category",
+  "pk": 2,
+  "fields": {
+    "name": "Environment"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 3,
+  "fields": {
+    "name": "Education"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 4,
+  "fields": {
+    "name": "Community Engagement"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 5,
+  "fields": {
+    "name": "Advocacy"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 6,
+  "fields": {
+    "name": "Technology"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 7,
+  "fields": {
+    "name": "Professional Development"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 8,
+  "fields": {
+    "name": "Healthcare"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 9,
+  "fields": {
+    "name": "Fundraising"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 10,
+  "fields": {
+    "name": "Mental Health"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 11,
+  "fields": {
+    "name": "Adoption"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 12,
+  "fields": {
+    "name": "Training"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 13,
+  "fields": {
+    "name": "Infrastructure"
+  }
+},
+{
+  "model": "nonprofit.category",
+  "pk": 14,
+  "fields": {
+    "name": "Food Security"
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 4,
+  "fields": {
+    "name": "FutureBright Education Foundation",
+    "description": "Focused on providing free education and resources to underprivileged children worldwide."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 5,
+  "fields": {
+    "name": "HealthBridge Alliance",
+    "description": "Committed to improving access to healthcare in underserved communities by organizing health camps and awareness drives."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 6,
+  "fields": {
+    "name": "KindHeart Animal Welfare",
+    "description": "Focused on rescuing and rehabilitating animals, as well as advocating for animal rights."
+  }
+},
+{
+  "model": "nonprofit.organization",
+  "pk": 7,
+  "fields": {
+    "name": "TogetherStrong Community Support",
+    "description": "Dedicated to fostering community resilience through social support programs, skill-building, and volunteerism."
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 9,
+  "fields": {
+    "name": "Book for a Brighter Future",
+    "description": "Collect and distribute books to rural schools and libraries.",
+    "date": "2024-06-11T23:00:00Z",
+    "location": "Thonglor",
+    "category": 3,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 10,
+  "fields": {
+    "name": "Tech for Teens",
+    "description": "Free coding and STEM workshops for teenagers from low-income families.",
+    "date": "2024-07-18T11:00:00Z",
+    "location": "Silom",
+    "category": 6,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 11,
+  "fields": {
+    "name": "Teachers Empowerment Summit",
+    "description": "A conference offering free training for teachers in innovative teaching methods.",
+    "date": "2024-08-12T23:00:00Z",
+    "location": "Ari",
+    "category": 7,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 12,
+  "fields": {
+    "name": "School Supplies Drive",
+    "description": "A donation campaign for stationery and school essentials.",
+    "date": "2024-09-05T05:00:00Z",
+    "location": "Mhorchit",
+    "category": 4,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 13,
+  "fields": {
+    "name": "Literacy Day Fair",
+    "description": "A community event featuring storytelling, free books, and literacy games for kids.",
+    "date": "2024-10-09T05:00:00Z",
+    "location": "Siam",
+    "category": 3,
+    "organization": 4
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 14,
+  "fields": {
+    "name": "Healthy Heart Camp",
+    "description": "Free heart checkups and lifestyle counseling for underprivileged individuals.",
+    "date": "2024-11-12T05:00:00Z",
+    "location": "Ari",
+    "category": 8,
+    "organization": 5
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 15,
+  "fields": {
+    "name": "Run for Wellness",
+    "description": "A charity run to raise funds for medical supplies in rural clinics.",
+    "date": "2024-12-11T05:00:00Z",
+    "location": "Silom",
+    "category": 9,
+    "organization": 5
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 16,
+  "fields": {
+    "name": "Immunization Awareness Week",
+    "description": "A week-long campaign to educate communities about the importance of vaccinations.",
+    "date": "2024-01-08T05:00:00Z",
+    "location": "Ratchtevi",
+    "category": 3,
+    "organization": 5
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 17,
+  "fields": {
+    "name": "Mobile Health Camp",
+    "description": "Bringing doctors to remote villages to provide checkups and medicine.",
+    "date": "2024-02-06T05:00:00Z",
+    "location": "Silom",
+    "category": 8,
+    "organization": 5
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 18,
+  "fields": {
+    "name": "Mental Health Matters Workshop",
+    "description": "Free workshops on managing stress, anxiety, and mental well-being.",
+    "date": "2024-04-08T23:00:00Z",
+    "location": "Lardprao",
+    "category": 10,
+    "organization": 5
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 19,
+  "fields": {
+    "name": "Adopt-A-Pet Day",
+    "description": "An event to connect stray animals with loving homes.",
+    "date": "2024-09-10T05:00:00Z",
+    "location": "Ari",
+    "category": 11,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 20,
+  "fields": {
+    "name": "Wildlife Rescue Workshop",
+    "description": "Training volunteers in rescuing and handling injured wildlife.",
+    "date": "2024-09-03T05:00:00Z",
+    "location": "Siam",
+    "category": 12,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 21,
+  "fields": {
+    "name": "Stray Feeding Campaign",
+    "description": "Volunteers provide food and water for stray animals in urban areas.",
+    "date": "2024-08-13T05:00:00Z",
+    "location": "Bangkok",
+    "category": 4,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 22,
+  "fields": {
+    "name": "Shelter Build-A-Thon",
+    "description": "A hands-on event to construct new shelters for stray animals.",
+    "date": "2024-07-08T05:00:00Z",
+    "location": "Mhorchit",
+    "category": 13,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 23,
+  "fields": {
+    "name": "Animal Rights Advocacy Week",
+    "description": "Public awareness campaigns on animal cruelty laws and ethical treatment.",
+    "date": "2024-06-02T11:00:00Z",
+    "location": "Lardprao",
+    "category": 5,
+    "organization": 6
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 24,
+  "fields": {
+    "name": "Soup Kitchen Saturdays",
+    "description": "Volunteers cook and serve meals to the homeless every Saturday.",
+    "date": "2024-11-07T23:00:00Z",
+    "location": "Mhorchit",
+    "category": 14,
+    "organization": 7
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 25,
+  "fields": {
+    "name": "Build-A-Home Project",
+    "description": "A team-based initiative to construct affordable housing for low-income families.",
+    "date": "2024-11-11T23:00:00Z",
+    "location": "Siam",
+    "category": 13,
+    "organization": 7
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 26,
+  "fields": {
+    "name": "Empowerment Through Art",
+    "description": "Art therapy and skill-building workshops for marginalized groups.",
+    "date": "2024-01-09T05:00:00Z",
+    "location": "Ari",
+    "category": 3,
+    "organization": 7
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 27,
+  "fields": {
+    "name": "Career Prep Day",
+    "description": "Free resume reviews and interview coaching for job seekers.",
+    "date": "2024-03-19T11:00:00Z",
+    "location": "Silom",
+    "category": 7,
+    "organization": 7
+  }
+},
+{
+  "model": "nonprofit.event",
+  "pk": 28,
+  "fields": {
+    "name": "Community Care Fair",
+    "description": "A multi-service event offering free health screenings, legal advice, and childcare.",
+    "date": "2024-12-19T05:00:00Z",
+    "location": "Silom",
+    "category": 4,
+    "organization": 7
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 39,
+  "fields": {
+    "amount": 100,
+    "date": "2024-11-28T15:11:17.537Z",
+    "organization": 4,
+    "event": 9
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 40,
+  "fields": {
+    "amount": 200,
+    "date": "2024-10-14T15:11:23Z",
+    "organization": 4,
+    "event": 10
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 41,
+  "fields": {
+    "amount": 100,
+    "date": "2024-09-10T15:13:05Z",
+    "organization": 4,
+    "event": 11
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 42,
+  "fields": {
+    "amount": 700,
+    "date": "2024-11-28T15:13:13.296Z",
+    "organization": 4,
+    "event": 12
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 43,
+  "fields": {
+    "amount": 300,
+    "date": "2024-10-10T15:14:18Z",
+    "organization": 5,
+    "event": 14
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 44,
+  "fields": {
+    "amount": 600,
+    "date": "2024-09-11T15:14:22Z",
+    "organization": 5,
+    "event": 15
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 45,
+  "fields": {
+    "amount": 400,
+    "date": "2024-11-28T15:14:26.995Z",
+    "organization": 5,
+    "event": 16
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 46,
+  "fields": {
+    "amount": 500,
+    "date": "2024-07-15T15:15:13Z",
+    "organization": 6,
+    "event": 19
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 47,
+  "fields": {
+    "amount": 600,
+    "date": "2024-10-14T15:15:18Z",
+    "organization": 6,
+    "event": 21
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 48,
+  "fields": {
+    "amount": 100,
+    "date": "2024-11-28T15:15:22.255Z",
+    "organization": 6,
+    "event": 21
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 49,
+  "fields": {
+    "amount": 400,
+    "date": "2024-11-28T15:16:11.379Z",
+    "organization": 6,
+    "event": 22
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 50,
+  "fields": {
+    "amount": 10,
+    "date": "2024-11-28T15:17:05Z",
+    "organization": 6,
+    "event": 21
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 51,
+  "fields": {
+    "amount": 200,
+    "date": "2024-11-28T15:17:24.701Z",
+    "organization": 6,
+    "event": 23
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 52,
+  "fields": {
+    "amount": 100,
+    "date": "2024-08-06T15:17:36Z",
+    "organization": 7,
+    "event": 24
+  }
+},
+{
+  "model": "nonprofit.donatemoney",
+  "pk": 53,
+  "fields": {
+    "amount": 200,
+    "date": "2024-11-28T15:17:40.267Z",
+    "organization": 7,
+    "event": 26
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 1,
+  "fields": {
+    "name": "Gardening"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 2,
+  "fields": {
+    "name": "Tree Planting"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 3,
+  "fields": {
+    "name": "Basic Engineering"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Renewable Energy Basics"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 5,
+  "fields": {
+    "name": "Cleaning"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 6,
+  "fields": {
+    "name": "Teamwork"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 7,
+  "fields": {
+    "name": "Community Engagement"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 8,
+  "fields": {
+    "name": "Communication"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 9,
+  "fields": {
+    "name": "Organization"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 10,
+  "fields": {
+    "name": "Cooking"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 12,
+  "fields": {
+    "name": "Painting"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 13,
+  "fields": {
+    "name": "Cleaning"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 14,
+  "fields": {
+    "name": "Animal Handling"
+  }
+},
+{
+  "model": "nonprofit.skill",
+  "pk": 15,
+  "fields": {
+    "name": "Teaching"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 1,
+  "fields": {
+    "name": "John Green",
+    "email": "john.green@greenearth.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 2,
+  "fields": {
+    "name": "Sarah Field",
+    "email": "sarah.field@greenearth.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 3,
+  "fields": {
+    "name": "Ethan Woods",
+    "email": "ethan.woods@greenearth.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 4,
+  "fields": {
+    "name": "Emma Grove",
+    "email": "emma.grove@greenearth.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 5,
+  "fields": {
+    "name": "Liam Hill",
+    "email": "liam.hill@greenearth.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 6,
+  "fields": {
+    "name": "Emma Pack",
+    "email": "emma.pack@brightfutures.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 7,
+  "fields": {
+    "name": "Oliver Teach",
+    "email": "oliver.teach@brightfutures.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 8,
+  "fields": {
+    "name": "Sophia Learn",
+    "email": "sophia.learn@brightfutures.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 9,
+  "fields": {
+    "name": "Noah Books",
+    "email": "noah.books@brightfutures.org"
+  }
+},
+{
+  "model": "nonprofit.volunteer",
+  "pk": 10,
+  "fields": {
+    "name": "Grace Desk",
+    "email": "grace.desk@brightfutures.org"
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 1,
+  "fields": {
+    "volunteer": 1,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 2,
+  "fields": {
+    "volunteer": 1,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 3,
+  "fields": {
+    "volunteer": 2,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 4,
+  "fields": {
+    "volunteer": 2,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 5,
+  "fields": {
+    "volunteer": 2,
+    "skill": 6
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 6,
+  "fields": {
+    "volunteer": 3,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 7,
+  "fields": {
+    "volunteer": 3,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 8,
+  "fields": {
+    "volunteer": 3,
+    "skill": 5
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 9,
+  "fields": {
+    "volunteer": 4,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 10,
+  "fields": {
+    "volunteer": 4,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 11,
+  "fields": {
+    "volunteer": 4,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 12,
+  "fields": {
+    "volunteer": 5,
+    "skill": 1
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 13,
+  "fields": {
+    "volunteer": 5,
+    "skill": 2
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 14,
+  "fields": {
+    "volunteer": 5,
+    "skill": 3
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 15,
+  "fields": {
+    "volunteer": 5,
+    "skill": 5
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 16,
+  "fields": {
+    "volunteer": 6,
+    "skill": 6
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 17,
+  "fields": {
+    "volunteer": 6,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 18,
+  "fields": {
+    "volunteer": 6,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 19,
+  "fields": {
+    "volunteer": 6,
+    "skill": 15
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 20,
+  "fields": {
+    "volunteer": 7,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 21,
+  "fields": {
+    "volunteer": 7,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 22,
+  "fields": {
+    "volunteer": 7,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 23,
+  "fields": {
+    "volunteer": 7,
+    "skill": 15
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 24,
+  "fields": {
+    "volunteer": 8,
+    "skill": 7
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 25,
+  "fields": {
+    "volunteer": 8,
+    "skill": 12
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 26,
+  "fields": {
+    "volunteer": 8,
+    "skill": 15
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 27,
+  "fields": {
+    "volunteer": 9,
+    "skill": 6
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 28,
+  "fields": {
+    "volunteer": 9,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 29,
+  "fields": {
+    "volunteer": 9,
+    "skill": 15
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 30,
+  "fields": {
+    "volunteer": 10,
+    "skill": 6
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 31,
+  "fields": {
+    "volunteer": 10,
+    "skill": 8
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 32,
+  "fields": {
+    "volunteer": 10,
+    "skill": 9
+  }
+},
+{
+  "model": "nonprofit.volunteerskill",
+  "pk": 33,
+  "fields": {
+    "volunteer": 10,
+    "skill": 15
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 9,
+  "fields": {
+    "event": 9,
+    "volunteer": 6,
+    "hours_contributed": 6
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 10,
+  "fields": {
+    "event": 10,
+    "volunteer": 7,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 11,
+  "fields": {
+    "event": 10,
+    "volunteer": 7,
+    "hours_contributed": 5
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 12,
+  "fields": {
+    "event": 12,
+    "volunteer": 7,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 13,
+  "fields": {
+    "event": 12,
+    "volunteer": 9,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 14,
+  "fields": {
+    "event": 10,
+    "volunteer": 8,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 15,
+  "fields": {
+    "event": 11,
+    "volunteer": 9,
+    "hours_contributed": 3
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 16,
+  "fields": {
+    "event": 9,
+    "volunteer": 9,
+    "hours_contributed": 2
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 17,
+  "fields": {
+    "event": 12,
+    "volunteer": 10,
+    "hours_contributed": 4
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 18,
+  "fields": {
+    "event": 9,
+    "volunteer": 7,
+    "hours_contributed": 1
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 19,
+  "fields": {
+    "event": 12,
+    "volunteer": 9,
+    "hours_contributed": 1
+  }
+},
+{
+  "model": "nonprofit.participation",
+  "pk": 20,
+  "fields": {
+    "event": 9,
+    "volunteer": 8,
+    "hours_contributed": 6
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-11-28T08:25:42.660Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "A",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-11-28T08:26:13.503Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "A",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-11-28T08:26:26.461Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "A",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-11-28T08:26:36.880Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "B",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-11-28T08:27:05.597Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "A2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-11-28T10:09:32.364Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "5000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-11-28T10:40:12.000Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "A2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Money donation\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-11-28T13:27:26.056Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "A",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-11-28T13:28:26.756Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "200",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-11-28T13:29:12.037Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "B",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-11-28T13:29:12.037Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "A",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-11-28T13:31:56.485Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "GreenEarth Initiative",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-11-28T13:32:12.293Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "FutureBright Education Foundation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-11-28T13:32:26.236Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "HealthBridge Alliance",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-11-28T13:32:42.950Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "KindHeart Animal Welfare",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-11-28T13:33:02.570Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "TogetherStrong Community Support",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-11-28T13:33:19.919Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "Environment",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-11-28T13:33:30.112Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Education",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-11-28T13:33:38.360Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "Community Engagement",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-11-28T13:33:45.286Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "5",
+    "object_repr": "Advocacy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-11-28T13:33:53.593Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "6",
+    "object_repr": "Technology",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-11-28T13:34:01.801Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "7",
+    "object_repr": "Professional Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-11-28T13:34:12.945Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "8",
+    "object_repr": "Healthcare",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-11-28T13:34:20.945Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "9",
+    "object_repr": "Fundraising",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-11-28T13:34:31.640Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "10",
+    "object_repr": "Mental Health",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-11-28T13:34:40.675Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "11",
+    "object_repr": "Adoption",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-11-28T13:34:49.015Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "12",
+    "object_repr": "Training",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-11-28T13:34:57.130Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "13",
+    "object_repr": "Infrastructure",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-11-28T13:35:08.147Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "14",
+    "object_repr": "Food Security",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-11-28T13:36:49.241Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Tree of Tomorrow",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-11-28T13:37:45.177Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Solar Power Workshop",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-11-28T13:38:25.871Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Eco-Cleanup Drive",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-11-28T13:39:03.802Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "Green Festival",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-11-28T13:39:41.247Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "Climate Awareness Walk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-11-28T13:42:13.800Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "9",
+    "object_repr": "Book for a Brighter Future",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-11-28T13:42:45.693Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "Tech for Teens",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-11-28T13:43:15.922Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "Teachers Empowerment Summit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-11-28T13:43:51.654Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "12",
+    "object_repr": "School Supplies Drive",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-11-28T13:44:18.947Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Literacy Day Fair",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-11-28T13:44:56.788Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "Healthy Heart Camp",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-11-28T13:45:26.842Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "Run for Wellness",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-11-28T13:46:08.475Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "Immunization Awareness Week",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-11-28T13:46:41.055Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "17",
+    "object_repr": "Mobile Health Camp",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-11-28T13:47:18.357Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "18",
+    "object_repr": "Mental Health Matters Workshop",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-11-28T13:54:27.382Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "Adopt-A-Pet Day",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-11-28T13:54:55.571Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "Wildlife Rescue Workshop",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-11-28T13:55:22.725Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "21",
+    "object_repr": "Stray Feeding Campaign",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-11-28T13:55:53.453Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "Shelter Build-A-Thon",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-11-28T13:56:28.992Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "Animal Rights Advocacy Week",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-11-28T13:57:01.276Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "Soup Kitchen Saturdays",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-11-28T13:57:25.863Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "Build-A-Home Project",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-11-28T13:58:09.466Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "26",
+    "object_repr": "Empowerment Through Art",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-11-28T13:58:36.547Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "27",
+    "object_repr": "Career Prep Day",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-11-28T13:59:00.667Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "28",
+    "object_repr": "Community Care Fair",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-11-28T14:01:58.813Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Gardening",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-11-28T14:04:00.525Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Tree Planting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-11-28T14:04:08.736Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Basic Engineering",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-11-28T14:04:14.011Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "Renewable Energy Basics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-11-28T14:04:19.821Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "5",
+    "object_repr": "Cleaning",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-11-28T14:04:26.188Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "6",
+    "object_repr": "Teamwork",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-11-28T14:04:34.155Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "7",
+    "object_repr": "Community Engagement",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-11-28T14:04:43.128Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "8",
+    "object_repr": "Communication",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-11-28T14:04:55.785Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "9",
+    "object_repr": "Organization",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-11-28T14:05:07.317Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "10",
+    "object_repr": "Cookinเ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-11-28T14:05:13.738Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "11",
+    "object_repr": "Teamwork",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-11-28T14:05:23.241Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "12",
+    "object_repr": "Painting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-11-28T14:05:31.309Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "13",
+    "object_repr": "Cleaning",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-11-28T14:05:37.826Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "14",
+    "object_repr": "Animal Handling",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2024-11-28T14:05:47.505Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "15",
+    "object_repr": "Teaching",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2024-11-28T14:08:21.183Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "10",
+    "object_repr": "Cooking",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2024-11-28T14:09:34.078Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "11",
+    "object_repr": "Teamwork",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2024-11-28T14:20:15.630Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "2000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2024-11-28T14:20:25.427Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Tree of Tomorrow",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Money donation\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2024-11-28T14:21:16.887Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2024-11-28T14:21:38.091Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Solar Power Workshop",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Money donation\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2024-11-28T14:22:12.735Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "300",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2024-11-28T14:22:49.077Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "1000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2024-11-28T14:23:11.626Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "200",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "600",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "500",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "1000",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "300",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "500",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2024-11-28T14:32:09.249Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "2300",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2024-11-28T14:48:49.716Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "50",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2024-11-28T14:48:49.716Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2024-11-28T14:48:49.716Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2024-11-28T14:49:00.829Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "50",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2024-11-28T14:52:59.879Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "19",
+    "object_repr": "1000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2024-11-28T14:53:12.826Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2024-11-28T14:53:24.732Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "800",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2024-11-28T14:53:34.723Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "900",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2024-11-28T14:53:55.031Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "Green Festival",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Money donation\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2024-11-28T14:54:04.759Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "Climate Awareness Walk",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Money donation\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2024-11-28T14:54:29.085Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "800",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2024-11-28T14:54:29.085Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "500",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2024-11-28T14:55:39.369Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "GreenEarth Initiative",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2024-11-28T14:56:25.316Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "500",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2024-11-28T14:56:30.274Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "900",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2024-11-28T14:56:38.551Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2024-11-28T14:56:44.491Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "200",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2024-11-28T14:57:57.272Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "28",
+    "object_repr": "400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2024-11-28T14:58:03.123Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "29",
+    "object_repr": "500",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2024-11-28T14:58:08.262Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "30",
+    "object_repr": "1200",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2024-11-28T15:00:09.686Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "34",
+    "object_repr": "200",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2024-11-28T15:00:41.582Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "36",
+    "object_repr": "900",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2024-11-28T15:00:47.995Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "35",
+    "object_repr": "300",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2024-11-28T15:01:30.571Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "38",
+    "object_repr": "400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.441Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "38",
+    "object_repr": "400",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.441Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "37",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.441Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "36",
+    "object_repr": "900",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.441Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "35",
+    "object_repr": "300",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.441Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "34",
+    "object_repr": "200",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "33",
+    "object_repr": "500",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "32",
+    "object_repr": "100",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "31",
+    "object_repr": "900",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "30",
+    "object_repr": "1200",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "29",
+    "object_repr": "500",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "28",
+    "object_repr": "400",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "250",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "800",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "400",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "900",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2024-11-28T15:11:08.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "500",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2024-11-28T15:11:51.196Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "40",
+    "object_repr": "200",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2024-11-28T15:14:36.382Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "44",
+    "object_repr": "600",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2024-11-28T15:14:42.821Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "43",
+    "object_repr": "300",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2024-11-28T15:15:02.488Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "41",
+    "object_repr": "100",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2024-11-28T15:15:30.721Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "47",
+    "object_repr": "900",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2024-11-28T15:16:00.118Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "46",
+    "object_repr": "700",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2024-11-28T15:16:24.181Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "47",
+    "object_repr": "700",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2024-11-28T15:16:37.209Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "46",
+    "object_repr": "500",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2024-11-28T15:16:46.817Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "47",
+    "object_repr": "600",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2024-11-28T15:17:16.560Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "50",
+    "object_repr": "10",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2024-11-28T15:17:49.239Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "52",
+    "object_repr": "100",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 1,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 1,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 1,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 1,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add organization",
+    "content_type": 2,
+    "codename": "add_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change organization",
+    "content_type": 2,
+    "codename": "change_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete organization",
+    "content_type": 2,
+    "codename": "delete_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view organization",
+    "content_type": 2,
+    "codename": "view_organization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add skill",
+    "content_type": 3,
+    "codename": "add_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change skill",
+    "content_type": 3,
+    "codename": "change_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete skill",
+    "content_type": 3,
+    "codename": "delete_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view skill",
+    "content_type": 3,
+    "codename": "view_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add event",
+    "content_type": 4,
+    "codename": "add_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change event",
+    "content_type": 4,
+    "codename": "change_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete event",
+    "content_type": 4,
+    "codename": "delete_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view event",
+    "content_type": 4,
+    "codename": "view_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add volunteer",
+    "content_type": 5,
+    "codename": "add_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change volunteer",
+    "content_type": 5,
+    "codename": "change_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete volunteer",
+    "content_type": 5,
+    "codename": "delete_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view volunteer",
+    "content_type": 5,
+    "codename": "view_volunteer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add participation",
+    "content_type": 6,
+    "codename": "add_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change participation",
+    "content_type": 6,
+    "codename": "change_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete participation",
+    "content_type": 6,
+    "codename": "delete_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view participation",
+    "content_type": 6,
+    "codename": "view_participation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add volunteer skill",
+    "content_type": 7,
+    "codename": "add_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change volunteer skill",
+    "content_type": 7,
+    "codename": "change_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete volunteer skill",
+    "content_type": 7,
+    "codename": "delete_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view volunteer skill",
+    "content_type": 7,
+    "codename": "view_volunteerskill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add donate money",
+    "content_type": 8,
+    "codename": "add_donatemoney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change donate money",
+    "content_type": 8,
+    "codename": "change_donatemoney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete donate money",
+    "content_type": 8,
+    "codename": "delete_donatemoney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view donate money",
+    "content_type": 8,
+    "codename": "view_donatemoney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add donate stuff",
+    "content_type": 9,
+    "codename": "add_donatestuff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change donate stuff",
+    "content_type": 9,
+    "codename": "change_donatestuff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete donate stuff",
+    "content_type": 9,
+    "codename": "delete_donatestuff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view donate stuff",
+    "content_type": 9,
+    "codename": "view_donatestuff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add donation stuff category",
+    "content_type": 10,
+    "codename": "add_donationstuffcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change donation stuff category",
+    "content_type": 10,
+    "codename": "change_donationstuffcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete donation stuff category",
+    "content_type": 10,
+    "codename": "delete_donationstuffcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view donation stuff category",
+    "content_type": 10,
+    "codename": "view_donationstuffcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 11,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 11,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 11,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 11,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 12,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 12,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 12,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 12,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 13,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 13,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 13,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 13,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 14,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 14,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 14,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 14,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 15,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 15,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 15,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 15,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 16,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 16,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 16,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 16,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$AMgbaC4MpoSzxVfoSnwgrp$ihKhXJrYgPrw6mkl41N/eIUQPsTh6buANVbHxEkK3GI=",
+    "last_login": "2024-11-28T08:25:24.869Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@demo.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-11-28T08:24:49.207Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "organization"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "skill"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "event"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "volunteer"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "participation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "volunteerskill"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "donatemoney"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "donatestuff"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "nonprofit",
+    "model": "donationstuffcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "po0aunw4qitsb2u0i9ccbic1j3x9qg1v",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln4G5uSPmew1rtrHECOFCcV4u4QKQW0b2beSyTY1pq2zkuaSFyEEqffLQM-uO2A7tBus8S5rcuU5a7Ig3Y5zsTP6-H-HVTo9Vtz8VoDnYcBCgEHawIpRsOGS_TRk7IUGZXKWoHFmIsJzkJw5GIsBsX7AwkNOKU:1tGZq0:TOpn3mlaUuuzRhw7lZfx_OSFo_NE7EYQcBG-fo4GUgE",
+    "expire_date": "2024-12-12T08:25:24.870Z"
+  }
+}
+]
