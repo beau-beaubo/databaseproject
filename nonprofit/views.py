@@ -294,63 +294,63 @@ def donation_home(request, pk):
         event_list = Event.objects.filter(organization=organization)
 
         money_per_month = DonateMoney.objects.filter(organization_id=pk
-                                                     ).annotate(month=TruncMonth('date')).values('month'
-                                                     ).annotate(money_count=Count('id'), total_amount=Sum('amount')
+                                                     ).annotate(month=TruncMonth('date')
+                                                     ).values('month'
+                                                     ).annotate(total_amount=Sum('amount')
                                                      ).order_by('month')
+
         money_per_month_list = [
             {'month': item['month'].strftime('%Y-%m'),
-             'money_count': item['total_amount']}
+             'total_amount': item['total_amount']}
             for item in money_per_month
         ]
         money_per_month_json = json.dumps(money_per_month_list)
 
         money_per_event = DonateMoney.objects.filter(organization_id=pk).values('event__name'
-                                                     ).annotate(event_count=Count('id'), total_amount=Sum('amount')
+                                                     ).annotate(total_amount=Sum('amount')
                                                      ).order_by('event__name')
         money_per_event_list = [
             {'event': item['event__name'],
-             'total_amount': item['total_amount']/100}
+             'total_amount': item['total_amount']}
             for item in money_per_event
         ]
         money_per_event_json = json.dumps(money_per_event_list)
 
-        return render(request, 'nonprofit/donation.html', {'event_list': event_list, 'today': today,
-                                                           'money_per_month': money_per_month_json,
-                                                           'organization': organization,
-                                                           'money_per_event': money_per_event_json})
+        return render(request, 'nonprofit/donation.html', {
+            'event_list': event_list,
+            'today': today,
+            'money_per_month': money_per_month_json,
+            'organization': organization,
+            'money_per_event': money_per_event_json,
+        })
+
     except Organization.DoesNotExist:
-        messages.error("Can't find this organization")
+        messages.error(request, "Can't find this organization.")
+        return redirect('nonprofit:organization_list')
 
 
 def donate_money(request, pk):
     try:
         event = Event.objects.get(pk=pk)
-        organization = Organization.objects.get(event=event)
+        organization = event.organization
 
         if request.method == 'POST':
             donate_money_form = DonateMoneyForm(request.POST)
-            donate_money_form.fields['organization'].initial = organization
-            donate_money_form.fields['date'].initial = datetime.now()
             if donate_money_form.is_valid():
-                donated_amount = donate_money_form.cleaned_data['amount']
-                if event.money_donation:
-                    event.money_donation.amount += donated_amount
-                    event.money_donation.save()
-                else:
-                    money_donation = donate_money_form.save(commit=False)
-                    money_donation.organization = organization
-                    money_donation.save()
-                    event.money_donation = money_donation
-                    event.save()
+                money_donation = donate_money_form.save(commit=False)
+                money_donation.organization = organization
+                money_donation.event = event
+                money_donation.date = datetime.now()
+                money_donation.save()
 
+                messages.success(request, "Thank you for your donation!")
                 return redirect('nonprofit:donation_home', pk=organization.id)
         else:
             donate_money_form = DonateMoneyForm()
+
     except Event.DoesNotExist:
-        messages.error(request, "Can't find this event")
-        return render(request, 'nonprofit/donation.html', {
-            'donate_money_form': None,
-        })
+        messages.error(request, "Can't find this event.")
+        return redirect('nonprofit:organization_list')
 
     return render(request, 'nonprofit/donation.html', {
         'event': event,

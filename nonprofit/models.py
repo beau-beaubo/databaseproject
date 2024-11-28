@@ -18,10 +18,23 @@ class Organization(models.Model):
         return self.name
 
 
+class Event(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=300)
+    date = models.DateTimeField(default=None)
+    location = models.CharField(max_length=300)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    organization = models.ForeignKey(Organization, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
 class DonateMoney(models.Model):
     amount = models.IntegerField(default=0)
     date = models.DateTimeField(default=now, null=True, blank=True)
     organization = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return str(self.amount)
@@ -31,19 +44,6 @@ class DonateMoneyForm(forms.ModelForm):
     class Meta:
         model = DonateMoney
         fields = "__all__"
-
-
-class Event(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
-    date = models.DateTimeField(default=None)
-    location = models.CharField(max_length=300)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    organization = models.ForeignKey(Organization, on_delete=models.CASCADE)
-    money_donation = models.ForeignKey(DonateMoney, on_delete=models.CASCADE, null=True, blank=True)
-
-    def __str__(self):
-        return self.name
 
 
 class Skill(models.Model):

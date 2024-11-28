@@ -62,7 +62,7 @@
                 const moneyData = JSON.parse('{{ money_per_month|safe|escapejs }}');
 
                 const moneyLabels = moneyData.map(item => item.month);
-                const moneyDataPoints = moneyData.map(item => item.money_count);
+                const moneyDataPoints = moneyData.map(item => item.total_amount);
 
                 const ctx = document.getElementById('moneyPerMonthChart').getContext('2d');
 
